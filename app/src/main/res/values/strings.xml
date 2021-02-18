@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Xceed</string>
+    <string name="title_home">Profil</string>
+    <string name="title_chrono">Chronometre</string>
+    <string name="title_exercice">Exercices</string>
+    <string name="title_entrainements">Entrainements</string>
+</resources>
