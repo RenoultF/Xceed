@@ -4,4 +4,5 @@
     <string name="title_chrono">Chronometre</string>
     <string name="title_exercice">Exercices</string>
     <string name="title_entrainements">Entrainements</string>
+    <string name="modifier">modifier</string>
 </resources>
