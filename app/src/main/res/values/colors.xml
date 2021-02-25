@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#808080</color>
     <color name="red">#6d071a</color>
+    <color name="solidCircle">#AAFFFFFF</color>
 </resources>
