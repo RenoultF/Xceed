@@ -12,20 +12,20 @@
         tools:layout="@layout/fragment_profil" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.xceed.ui.exercice.ExerciceFragment"
-        android:label="@string/title_chrono"
-        tools:layout="@layout/fragment_exercice" />
-
-    <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_Chronometre"
         android:name="com.example.xceed.ui.chronometre.ChronometreFragment"
-        android:label="@string/title_exercice"
+        android:label="@string/title_chrono"
         tools:layout="@layout/fragment_chronometre" />
 
     <fragment
-        android:id="@+id/navigation_entrainements"
+        android:id="@+id/navigation_exercices"
         android:name="com.example.xceed.ui.exercice.ExerciceFragment"
+        android:label="@string/title_exercice"
+        tools:layout="@layout/fragment_exercice" />
+
+    <fragment
+        android:id="@+id/navigation_entrainements"
+        android:name="com.example.xceed.ui.entrainement."
         android:label="@string/title_entrainements"
         tools:layout="@layout/fragment_exercice" />
 </navigation>

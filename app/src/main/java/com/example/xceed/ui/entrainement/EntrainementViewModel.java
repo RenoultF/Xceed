@@ -1,4 +1,4 @@
-package com.example.xceed.ui.exercice;
+package com.example.xceed.ui.entrainement;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
