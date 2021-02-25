@@ -17,14 +17,14 @@ import com.example.xceed.ui.exercice.ExerciceViewModel;
 
 public class EntrainementFragment extends Fragment {
 
-    private ExerciceViewModel entrainementViewModel;
+    private EntrainementViewModel entrainementViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         entrainementViewModel =
-                new ViewModelProvider(this).get(ExerciceViewModel.class);
+                new ViewModelProvider(this).get(EntrainementViewModel.class);
         View root = inflater.inflate(R.layout.fragment_entrainement, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
+        final TextView textView = root.findViewById(R.id.text_entrainement);
         entrainementViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
