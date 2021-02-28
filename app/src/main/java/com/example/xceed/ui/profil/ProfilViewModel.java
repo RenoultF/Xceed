@@ -22,6 +22,10 @@ public class ProfilViewModel extends ViewModel {
         return mText;
     }
 
-
+    public float calculImcActuel(String taille, String poid){
+        float tailleImc = (float)Float.parseFloat(taille)/100;
+        float poidsImc = (float)Float.parseFloat(poid);
+        return poidsImc/(tailleImc*tailleImc);
+    }
 
 }

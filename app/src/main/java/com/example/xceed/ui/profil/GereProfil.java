@@ -19,7 +19,7 @@ import java.io.InputStream;
 public class GereProfil {
 
     public Profil recupProfil(Context context){
-        Profil profil = new Profil("Pseudo",0,"0.0");
+        Profil profil = new Profil("Pseudo",0,"0","0");
 
         File newXml = new File(context.getFilesDir()+"/Profil.xml");
 
@@ -54,7 +54,7 @@ public class GereProfil {
                             profil.setPseudo(pseudo);
                             profil.setTaille(taille);
                             profil.setKg(poids);
-
+                            profil.calculImc();
                         }
 
                 }

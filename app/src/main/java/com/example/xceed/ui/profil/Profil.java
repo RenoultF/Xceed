@@ -4,11 +4,13 @@ public class Profil {
     private String pseudo;
     private int taille;
     private String kg;
+    private String imc;
 
-    public Profil(String p, int t, String k){
+    public Profil(String p, int t, String k,String imc){
         this.pseudo = p;
         this.taille = t;
         this.kg = k;
+        this.imc = imc;
     }
 
     public String getKg() {
@@ -23,6 +25,10 @@ public class Profil {
         return pseudo;
     }
 
+    public String getImc() {
+        return imc;
+    }
+
     public void setPseudo(String pseudo) {
         this.pseudo = pseudo;
     }
@@ -33,6 +39,19 @@ public class Profil {
 
     public void setTaille(int taille) {
         this.taille = taille;
+    }
+
+    public void setImc(String imc) {
+        this.imc = imc;
+    }
+
+    public float calculImc(){
+        float tailleImc = (float)this.taille/100;
+        float imcTemp = Float.parseFloat(this.kg)/(tailleImc*tailleImc);
+        System.out.println("val imc 1: "+ imcTemp);
+        this.imc = String.valueOf(imcTemp);
+        System.out.println("val imc 2: "+ imcTemp);
+        return imcTemp;
     }
 }
 
