@@ -28,4 +28,6 @@ public class ProfilViewModel extends ViewModel {
         return poidsImc/(tailleImc*tailleImc);
     }
 
+
+
 }

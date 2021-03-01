@@ -1,5 +1,6 @@
 package com.example.xceed.ui.profil;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -34,6 +36,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.xceed.R;
 import com.goodiebag.protractorview.ProtractorView;
 import com.xw.repo.BubbleSeekBar;
+
 
 public class ProfilFragment extends Fragment {
 
@@ -45,6 +48,7 @@ public class ProfilFragment extends Fragment {
     private TextView changePoids;
     private EditText tail;
     private BubbleSeekBar seekBarImc;
+    private TextView affichageImc;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -58,9 +62,12 @@ public class ProfilFragment extends Fragment {
         ProtractorView protractorViewPoids = (ProtractorView)root.findViewById(R.id.protractorViewPoids);
         seekBarImc = (BubbleSeekBar) root.findViewById(R.id.seekBar_imc);
         pseudo = (EditText) root.findViewById(R.id.txt_pseudo);
+        affichageImc = (TextView) root.findViewById(R.id.affichage_imc);
         protractorViewPoids.setAngle(Integer.parseInt(profilRecup.getKg()));
         changePoids.setText("Poids : " + profilRecup.getKg() + "Kg");
+        setViewImc(profilRecup.calculImc());
         protractorViewPoids.setOnProtractorViewChangeListener(new ProtractorView.OnProtractorViewChangeListener() {
+            @SuppressLint({"ResourceAsColor", "NewApi"})
             @Override
             public void onProgressChanged(ProtractorView protractorView, int progress, boolean fromUser) {
                 /*try {
@@ -69,6 +76,15 @@ public class ProfilFragment extends Fragment {
                     e.printStackTrace();
                 }*/
                 changePoids.setText("Poids : " +Integer.toString(progress) + "Kg");
+                float calculImc = profilViewModel.calculImcActuel(tail.getText().toString(),String.valueOf(progress));
+                setViewImc(calculImc);
+                if(calculImc>42){
+                    calculImc = 42;
+                }
+                if(calculImc<12){
+                    calculImc = 12;
+                }
+                seekBarImc.setProgress(calculImc);
 
             }
 
@@ -79,7 +95,7 @@ public class ProfilFragment extends Fragment {
 
             @Override
             public void onStopTrackingTouch(ProtractorView protractorView) {
-
+                gereProfil.saveProfil(getContext(),pseudo.getText().toString(),tail.getText().toString(),String.valueOf(protractorViewPoids.getAngle()));
             }
         });
         seekBarImc.setEnabled(false);
@@ -94,5 +110,33 @@ public class ProfilFragment extends Fragment {
             } });
 
         return root;
+    }
+
+    public void setViewImc(float calculImc){
+        if(calculImc<18.5){
+            affichageImc.setText("Insuffisance pondérale (maigreur)");
+            affichageImc.setTextColor(getContext().getColor(R.color.blue));
+            seekBarImc.setBackgroundColor(getContext().getColor(R.color.blue));
+        }
+        else if(calculImc>=18.5 && calculImc<=25){
+            affichageImc.setText("Corpulence normale");
+            affichageImc.setTextColor(getContext().getColor(R.color.green));
+            seekBarImc.setBackgroundColor(getContext().getColor(R.color.green));
+        }
+        else if(calculImc>25 && calculImc<30){
+            affichageImc.setText("Surpoids");
+            affichageImc.setTextColor(getContext().getColor(R.color.yellow));
+            seekBarImc.setBackgroundColor(getContext().getColor(R.color.yellow));
+        }
+        else if(calculImc>=30 && calculImc<35){
+            affichageImc.setText("Obésité modérée");
+            affichageImc.setTextColor(getContext().getColor(R.color.orange));
+            seekBarImc.setBackgroundColor(getContext().getColor(R.color.orange));
+        }
+        else{
+            affichageImc.setText("Obésité sévère");
+            affichageImc.setTextColor(getContext().getColor(R.color.red));
+            seekBarImc.setBackgroundColor(getContext().getColor(R.color.red));
+        }
     }
 }

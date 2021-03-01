@@ -206,11 +206,6 @@
                         android:textColor="@color/black"
                         android:textSize="24sp" />
 
-                    <TextView
-                        android:id="@+id/affichage_imc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="TextView" />
                 </LinearLayout>
 
                 <com.xw.repo.BubbleSeekBar
@@ -233,6 +228,13 @@
                     app:bsb_show_section_text="true"
                     app:bsb_show_thumb_text="true"
                     app:bsb_track_color="@color/grey"/>
+
+                <TextView
+                    android:id="@+id/affichage_imc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                     />
 
             </LinearLayout>
         </RelativeLayout>
