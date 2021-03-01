@@ -48,9 +48,7 @@ public class Profil {
     public float calculImc(){
         float tailleImc = (float)this.taille/100;
         float imcTemp = Float.parseFloat(this.kg)/(tailleImc*tailleImc);
-        System.out.println("val imc 1: "+ imcTemp);
         this.imc = String.valueOf(imcTemp);
-        System.out.println("val imc 2: "+ imcTemp);
         return imcTemp;
     }
 }

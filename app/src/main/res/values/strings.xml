@@ -5,4 +5,11 @@
     <string name="title_exercice">Exercices</string>
     <string name="title_entrainements">Entrainements</string>
     <string name="modifier">modifier</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="restart">Restart</string>
+    <string name="setFormat">Set Format</string>
+    <string name="clearFormat">Clear Format</string>
+    <string name="chronometerInAndroid">Chrono</string>
+    <string name="text_notifications">Chrono</string>
 </resources>
