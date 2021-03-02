@@ -8,10 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#808080</color>
-    <color name="red">#6d071a</color>
+    <color name="red">#FF0000</color>
     <color name="yellow">#FFFF00</color>
     <color name="orange">#FF8C00</color>
     <color name="green">#32CD32</color>
     <color name="solidCircle">#AAFFFFFF</color>
-    <color name="blue">#0059FF</color>
+    <color name="blue">#33F6FF</color>
 </resources>
