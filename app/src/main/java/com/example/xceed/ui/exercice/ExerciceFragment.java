@@ -23,13 +23,7 @@ public class ExerciceFragment extends Fragment {
         exerciceViewModel =
                 new ViewModelProvider(this).get(ExerciceViewModel.class);
         View root = inflater.inflate(R.layout.fragment_exercice, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        exerciceViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        
         return root;
     }
 }

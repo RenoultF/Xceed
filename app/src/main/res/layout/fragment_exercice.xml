@@ -1,22 +1,1714 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/grad"
     tools:context=".ui.exercice.ExerciceFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="112dp"
+                android:layout_height="73dp"
+                android:src="@drawable/img_dev_couch"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_dev_couch_Barre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Developpé couché (Barre)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_dev_couch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Pectoraux"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_4_5" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+
+
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="112dp"
+                android:layout_height="73dp"
+                android:src="@drawable/dev_couch_incline"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_dev_couch_incl_Barre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Developpé couché incliné (Barre)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_dev_couch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Pectoraux (haut)"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_4_5" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+
+
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="112dp"
+                android:layout_height="73dp"
+                android:src="@drawable/dev_couch_decli"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_dev_couch_decli_Barre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Developpé couché decliné (Barre)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_dev_couch_decli_Barre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Pectoraux (bas)"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_5_5" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="115dp"
+                android:layout_height="73dp"
+                android:src="@drawable/pompe"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_pompe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Pompe (Poids Du Corps)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_pompe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Pectoraux"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_1_5" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/ecarte_haltere"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_ecarte_haltere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Ecarté (Haltere)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_ecarte_haltere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Pectoraux"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_3_5" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/ecarte_poulie"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_ecarte_poulie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Ecarté (Poulie)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_ecarte_poulie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Pectoraux"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_2_5" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/dev_couch_haltere"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_dev_couch_haltere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Developpé couché (Haltere)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_dev_couch_haltere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Pectoraux"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_3_5" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/dev_couch_incli_haltere"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_dev_couch_incli_haltere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Developpé couché incliné (Haltere)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_dev_couch_incli_haltere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Pectoraux"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_3_5" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/butterfly"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_butterfly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Butterfly"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_butterfly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Pectoraux"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_1_5" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/traction"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_traction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Traction"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_traction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Dos (Grand Dorsal)"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_2_5" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/tirage_vertical"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_tirage_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Tirage Vertical"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_tirage_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Dos (Grand Dorsal)"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_2_5" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/rowing_barre"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_rowing_barre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Rowing (Barre)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_rowing_barre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Dos (Grand Dorsal)"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_2_5" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/tirage_bucheron"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_tirage_bucheron"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Tirage Bucheron (Haltere)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_tirage_bucheron"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Dos (Grand Dorsal)"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_3_5" />
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/tirage_vertical_prise_serre"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_tirage_vertical_prise_serre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Tirage Bucheron (Haltere)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_tirage_vertical_prise_serre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Dos (Grand/petit rond)"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_3_5" />
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/soulever_de_terre"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_soulever_de_terre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Soulever de terre (Barre)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_soulever_de_terre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Dos (Lombaire)"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_5_5" />
+
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/curl_barre"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_curl_barre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Curl (Barre)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_curl_barre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Biceps"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_1_5" />
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/curl_concentre_haltere"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_curl_concentre_haltere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Curl concentré (Haltere)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_curl_concentre_haltere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Biceps"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_1_5" />
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/curl_prise_marteau"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_curl_prise_marteau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Curl prise marteau (Haltere)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_curl_prise_marteau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Biceps"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_1_5" />
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/curl_larry_scott"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_curl_larry_scott"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Curl Larry Scott (Haltere)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_curl_larry_scott"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Biceps"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_1_5" />
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/dips"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_dips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Dips"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_dips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Triceps / Pectoraux"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_1_5" />
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/extension_couche_barre"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_extension_couche_barre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Extension Couché (Barre)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_extension_couche_barre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Triceps"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_3_5" />
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/extension_poulie"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_extension_poulie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Extension (Poulie)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_extension_poulie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Triceps"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_2_5" />
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/extension_incline_poulie"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_extension_incline_poulie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Extension incliné (Poulie)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_extension_incline_poulie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Triceps"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_4_5" />
+
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/extension_vertical_haltere"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_extension_vertical_haltere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Extension verticale (Haltere)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_extension_vertical_haltere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Triceps"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_4_5" />
+
+            <Button
+                android:id="@+id/button24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/squat"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_squat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Squat (Barre)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_squat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Jambe/Fessier"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_4_5" />
+
+            <Button
+                android:id="@+id/button25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/soulever_de_terre_jambe_tendu"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_soulever_de_terre_jambe_tendu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Soulever de Terre Jambe Tendues (Barre)"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_soulever_de_terre_jambe_tendu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Jambe/Fessier"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_5_5" />
+
+            <Button
+                android:id="@+id/button26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/leg_extension"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_leg_extension"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Leg Extension"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_leg_extension"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Jambe"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_1_5" />
+
+            <Button
+                android:id="@+id/button27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/press_cuisse"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_press_cuisse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Press Cuisse"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_press_cuisse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Jambe"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_3_5" />
+
+            <Button
+                android:id="@+id/button28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/leg_curl"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_leg_curl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Leg Curl"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_leg_curl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Jambe"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_2_5" />
+
+            <Button
+                android:id="@+id/button29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="73dp"
+                android:src="@drawable/fente"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/titre_fente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="5dp"
+                android:text="Fente"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/catégorie_fente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="30dp"
+                android:text="Jambe"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="55dp"
+                android:clickable="true"
+                android:src="@drawable/etoile_2_5" />
+
+            <Button
+                android:id="@+id/button30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="11dp"
+                android:text=" + " />
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+    </LinearLayout>
+
+</ScrollView>
