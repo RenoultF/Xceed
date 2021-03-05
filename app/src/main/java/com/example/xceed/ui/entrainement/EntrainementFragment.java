@@ -13,7 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.xceed.R;
-import com.example.xceed.ui.exercice.ExerciceViewModel;
+import com.example.xceed.ui.entrainement.EntrainementViewModel;
 
 public class EntrainementFragment extends Fragment {
 
@@ -24,13 +24,7 @@ public class EntrainementFragment extends Fragment {
         entrainementViewModel =
                 new ViewModelProvider(this).get(EntrainementViewModel.class);
         View root = inflater.inflate(R.layout.fragment_entrainement, container, false);
-        final TextView textView = root.findViewById(R.id.text_entrainement);
-        entrainementViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 }

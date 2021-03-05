@@ -12,4 +12,9 @@
     <string name="clearFormat">Clear Format</string>
     <string name="chronometerInAndroid">Chrono</string>
     <string name="text_notifications">Chrono</string>
+    <string name="description_ppl">PPL</string>
+    <string name="description_fullbody">Full Body</string>
+    <string name="description_halfbody">Half Body</string>
+    <string name="description_split">Split</string>
+    <string name="description_custom">Custom</string>
 </resources>
