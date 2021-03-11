@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -42,11 +43,12 @@ public class ProfilFragment extends Fragment {
 
     private ProfilViewModel profilViewModel;
     private EditText pseudo;
-    private Button btnModifProfil;
+    private ImageButton btnModifProfil;
     private GereProfil gereProfil;
     private Profil profilRecup;
     private TextView changePoids;
-    private EditText tail;
+    private TextView changeTail;
+    private SeekBar seekBarTaille;
     private BubbleSeekBar seekBarImc;
     private TextView affichageImc;
 
@@ -57,13 +59,15 @@ public class ProfilFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_profil, container, false);
         gereProfil = new GereProfil();
         profilRecup = gereProfil.recupProfil(getContext());
-        tail = (EditText) root.findViewById(R.id.nb_taille);
+        changeTail = (TextView) root.findViewById(R.id.txt_taille);
         changePoids = (TextView) root.findViewById(R.id.txt_poids);
         ProtractorView protractorViewPoids = (ProtractorView)root.findViewById(R.id.protractorViewPoids);
+        seekBarTaille = (SeekBar) root.findViewById(R.id.seekBarTaille);
         seekBarImc = (BubbleSeekBar) root.findViewById(R.id.seekBar_imc);
         pseudo = (EditText) root.findViewById(R.id.txt_pseudo);
         affichageImc = (TextView) root.findViewById(R.id.affichage_imc);
         protractorViewPoids.setAngle(Integer.parseInt(profilRecup.getKg()));
+        seekBarTaille.setProgress(profilRecup.getTaille());
         changePoids.setText("Poids : " + profilRecup.getKg() + "Kg");
         setViewImc(profilRecup.calculImc());
         protractorViewPoids.setOnProtractorViewChangeListener(new ProtractorView.OnProtractorViewChangeListener() {
@@ -76,7 +80,7 @@ public class ProfilFragment extends Fragment {
                     e.printStackTrace();
                 }*/
                 changePoids.setText("Poids : " +Integer.toString(progress) + "Kg");
-                float calculImc = profilViewModel.calculImcActuel(tail.getText().toString(),String.valueOf(progress));
+                float calculImc = profilViewModel.calculImcActuel(String.valueOf(seekBarTaille.getProgress()),String.valueOf(progress));
                 setViewImc(calculImc);
                 if(calculImc>42){
                     calculImc = 42;
@@ -95,18 +99,43 @@ public class ProfilFragment extends Fragment {
 
             @Override
             public void onStopTrackingTouch(ProtractorView protractorView) {
-                gereProfil.saveProfil(getContext(),pseudo.getText().toString(),tail.getText().toString(),String.valueOf(protractorViewPoids.getAngle()));
+                gereProfil.saveProfil(getContext(),pseudo.getText().toString(),String.valueOf(seekBarTaille.getProgress()),String.valueOf(protractorViewPoids.getAngle()));
+            }
+        });
+
+        seekBarTaille.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                changeTail.setText("Taille : "+Integer.toString(progress)+ " cm");
+                float calculImc = profilViewModel.calculImcActuel(String.valueOf(progress),String.valueOf(protractorViewPoids.getAngle()));
+                setViewImc(calculImc);
+                if(calculImc>42){
+                    calculImc = 42;
+                }
+                if(calculImc<12){
+                    calculImc = 12;
+                }
+                seekBarImc.setProgress(calculImc);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                gereProfil.saveProfil(getContext(),pseudo.getText().toString(),String.valueOf(seekBarTaille.getProgress()),String.valueOf(protractorViewPoids.getAngle()));
             }
         });
         seekBarImc.setEnabled(false);
         seekBarImc.setProgress(profilRecup.calculImc());
-        tail.setText(Integer.toString(profilRecup.getTaille()));
+        changeTail.setText("Taille : "+Integer.toString(profilRecup.getTaille())+ " cm");
         pseudo.setText(profilRecup.getPseudo());
-        btnModifProfil = (Button) root.findViewById(R.id.BtnVlider);
+        btnModifProfil = (ImageButton) root.findViewById(R.id.BtnVlider);
         btnModifProfil.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View root) {
-                gereProfil.saveProfil(getContext(),pseudo.getText().toString(),tail.getText().toString(),String.valueOf(protractorViewPoids.getAngle()));
-                seekBarImc.setProgress(profilViewModel.calculImcActuel(tail.getText().toString(),String.valueOf(protractorViewPoids.getAngle())));
+                gereProfil.saveProfil(getContext(),pseudo.getText().toString(),String.valueOf(seekBarTaille.getProgress()),String.valueOf(protractorViewPoids.getAngle()));
             } });
 
         return root;
