@@ -19,6 +19,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.xceed.MainActivity;
 import com.example.xceed.R;
 import com.example.xceed.ui.entrainement.EntrainementViewModel;
+import com.example.xceed.ui.profil.ProfilFragment;
 import com.example.xceed.ui.profil.ProfilViewModel;
 import com.goodiebag.protractorview.ProtractorView;
 import com.xw.repo.BubbleSeekBar;
@@ -59,9 +60,8 @@ public class EntrainementFragment extends Fragment {
                 public void onClick(View v) {
                     // TODO Auto-generated method stub
 
-
-                        startActivity(new Intent(EntrainementFragment.this.getActivity(), MainActivity.class));
-
+                        Intent intent = new Intent(EntrainementFragment.this.getActivity(), FbActivity.class);
+                        startActivity(intent);
                 }
             });
         lunch_split.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class EntrainementFragment extends Fragment {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 
-                startActivity(new Intent(EntrainementFragment.this.getActivity(), MainActivity.class));            }
+                startActivity(new Intent(EntrainementFragment.this.getActivity(), ProfilFragment.class));            }
         });
         lunch_ppl.setOnClickListener(new View.OnClickListener() {
 
