@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,7 +23,8 @@ import com.example.xceed.R;
 
 public class ChronometreFragment extends Fragment {
     private Chronometer simpleChronometer;
-    private Button start, stop, restart, setFormat, clearFormat;
+    private ImageButton  start, stop, restart;
+    private Button setFormat, clearFormat;
     private TextView value;
 
     private ChronometreViewModel chronometreViewModel;
@@ -33,11 +35,11 @@ public class ChronometreFragment extends Fragment {
                 new ViewModelProvider(this).get(ChronometreViewModel.class);
         View root = inflater.inflate(R.layout.fragment_chronometre, container, false);
         simpleChronometer = (Chronometer) root.findViewById(R.id.simpleChronometer);
-        start = (Button) root.findViewById(R.id.startButton);
-        stop = (Button) root.findViewById(R.id.stopButton);
-        restart = (Button) root.findViewById(R.id.restartButton);
-        setFormat = (Button) root.findViewById(R.id.setFormat);
-        clearFormat = (Button) root.findViewById(R.id.clearFormat);
+        start =  (ImageButton)root.findViewById(R.id.startButton);
+        stop =  (ImageButton)root.findViewById(R.id.stopButton);
+        restart =  (ImageButton)root.findViewById(R.id.restartButton);
+        setFormat =  (Button)root.findViewById(R.id.setFormat);
+        clearFormat = (Button)root.findViewById(R.id.clearFormat);
 
         //final TextView textView = root.findViewById(R.id.text_notifications);
         // value.setText(this.temps.getTop() +":"+this.temps.getMid()+":"+this.temps.getLast());
