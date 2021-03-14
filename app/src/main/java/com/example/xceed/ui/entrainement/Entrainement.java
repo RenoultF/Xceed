@@ -1,5 +1,5 @@
 package com.example.xceed.ui.entrainement;
-/*
+
 import java.util.ArrayList;
 import java.util.List;
 import android.view.View;
@@ -7,8 +7,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
-public class Entrainement {
+public interface Entrainement {
     //list for sets to do
+    /*
     private int numOfSets;
     private List<Sets> sets = new ArrayList<Sets>();
     //list for sets done
@@ -108,5 +109,5 @@ public class Entrainement {
 
 
     }
-
-}*/
+*/
+}
