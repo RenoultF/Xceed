@@ -19,10 +19,14 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.xceed.MainActivity;
 import com.example.xceed.R;
 import com.example.xceed.ui.entrainement.EntrainementViewModel;
+import com.example.xceed.ui.exercice.Exercice;
 import com.example.xceed.ui.profil.ProfilFragment;
 import com.example.xceed.ui.profil.ProfilViewModel;
 import com.goodiebag.protractorview.ProtractorView;
 import com.xw.repo.BubbleSeekBar;
+
+import java.util.Collection;
+import java.util.LinkedList;
 
 public class EntrainementFragment extends Fragment {
 
@@ -42,10 +46,10 @@ public class EntrainementFragment extends Fragment {
         entrainementViewModel =
                 new ViewModelProvider(this).get(EntrainementViewModel.class);
         View root = inflater.inflate(R.layout.fragment_entrainement, container, false);
-        entrainement_fb = new Entrainement_fb();
-        entrainement_hf = new Entrainement_hf();
-        entrainement_ppl = new Entrainement_ppl();
-        entrainement_split = new Entrainement_split();
+        /*entrainement_fb = new Entrainement_fb(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));
+        entrainement_hf = new Entrainement_hf(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));
+        entrainement_ppl = new Entrainement_ppl(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));
+        entrainement_split = new Entrainement_split(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));*/
 
         //entrainementRecup = entrainement.recupEntrainement(getContext());
         lunch_fb =(Button) root.findViewById(R.id.buttone2);

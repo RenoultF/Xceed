@@ -1,13 +1,64 @@
 package com.example.xceed.ui.entrainement;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
-public interface Entrainement {
+
+import com.example.xceed.ui.exercice.Exercice;
+
+public class Entrainement {
+    private LinkedList<Sets> setsToDo;
+    private LinkedList<Sets> setsDone;
+    private ArrayList<Exercice> lstExercices;
+    private int nbSets;
+    protected int nbJours;
+    private int nbRep;
+    public Entrainement(int nbSets,int nbRep,LinkedList<Exercice> lstExercices){
+        this.nbSets=nbSets;
+        this.nbJours = 0;
+        this.nbRep=nbRep;
+        this.lstExercices = new ArrayList<Exercice>(lstExercices);
+        for (Exercice temp : lstExercices) {
+            setsToDo.add(new Sets(this.nbRep,100,temp.getEx(),true));
+        }
+
+    }
+
+
+    public int getNbJours() {
+        return nbJours;
+    }
+
+    public int getNbRep() {
+        return nbRep;
+    }
+
+    public int getNbSets() {
+        return nbSets;
+    }
+
+
+    public void setLstExercices(ArrayList<Exercice> lstExercices) {
+        this.lstExercices = lstExercices;
+    }
+
+    public void setNbJours(int nbJours) {
+        this.nbJours = nbJours;
+    }
+
+    public void setNbRep(int nbRep) {
+        this.nbRep = nbRep;
+    }
+
+    public void setNbSets(int nbSets) {
+        this.nbSets = nbSets;
+    }
+
     //list for sets to do
     /*
     private int numOfSets;
