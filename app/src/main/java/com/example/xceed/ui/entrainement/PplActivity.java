@@ -34,21 +34,26 @@ import com.goodiebag.protractorview.ProtractorView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.xw.repo.BubbleSeekBar;
 
-public class FbActivity extends Activity {
-    private Button day1,day2,day3;
+public class PplActivity extends Activity {
+    private Button day1,day2,day3,day4,day5,day6;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_fb);
-        day1 =  (Button)findViewById(R.id.fb_day1);
-        day2 =  (Button)findViewById(R.id.fb_day2);
-        day3 =  (Button)findViewById(R.id.fb_day3);
+        setContentView(R.layout.fragment_ppl);
+        day1 =  (Button)findViewById(R.id.ppl_day1);
+        day2 =  (Button)findViewById(R.id.ppl_day2);
+        day3 =  (Button)findViewById(R.id.ppl_day3);
+        day4 =  (Button)findViewById(R.id.ppl_day4);
+        day5 =  (Button)findViewById(R.id.ppl_day5);
+        day6 =  (Button)findViewById(R.id.ppl_day6);
+
+
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
         //String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
         // Capture the layout's TextView and set the string as its text
-       // TextView textView = findViewById(R.id.textView);
+        // TextView textView = findViewById(R.id.textView);
         //textView.setText(message);
         day1.setOnClickListener(new View.OnClickListener(){
 
@@ -73,6 +78,39 @@ public class FbActivity extends Activity {
             }
         });
         day3.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                /*TextView view = new TextView(ViewOnClick.this);
+                view.setText(++i+" view");
+                ll.addView(view, layoutParams);*/
+                //TODO
+
+            }
+        });
+        day4.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                /*TextView view = new TextView(ViewOnClick.this);
+                view.setText(++i+" view");
+                ll.addView(view, layoutParams);*/
+                //TODO
+
+            }
+        });
+        day5.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                /*TextView view = new TextView(ViewOnClick.this);
+                view.setText(++i+" view");
+                ll.addView(view, layoutParams);*/
+                //TODO
+
+            }
+        });
+        day6.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {

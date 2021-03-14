@@ -72,7 +72,7 @@ public class EntrainementFragment extends Fragment {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 
-                startActivity(new Intent(EntrainementFragment.this.getActivity(), ProfilFragment.class));            }
+                startActivity(new Intent(EntrainementFragment.this.getActivity(), SplitActivity.class));            }
         });
         lunch_ppl.setOnClickListener(new View.OnClickListener() {
 
@@ -82,7 +82,7 @@ public class EntrainementFragment extends Fragment {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 
-                startActivity(new Intent(EntrainementFragment.this.getActivity(), MainActivity.class));            }
+                startActivity(new Intent(EntrainementFragment.this.getActivity(), PplActivity.class));            }
         });
         lunch_hf.setOnClickListener(new View.OnClickListener() {
 
@@ -92,7 +92,7 @@ public class EntrainementFragment extends Fragment {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
 
-                startActivity(new Intent(EntrainementFragment.this.getActivity(), MainActivity.class));            }
+                startActivity(new Intent(EntrainementFragment.this.getActivity(), HfActivity.class));            }
         });
 
         return root;

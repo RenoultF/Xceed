@@ -22,6 +22,10 @@
         </activity>
         <activity android:name=".MainActivity"/>
         <activity android:name=".ui.entrainement.FbActivity"/>
+        <activity android:name=".ui.entrainement.HfActivity"/>
+        <activity android:name=".ui.entrainement.PplActivity"/>
+        <activity android:name=".ui.entrainement.SplitActivity"/>
+
     </application>
 
 </manifest>

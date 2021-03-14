@@ -17,4 +17,25 @@
     <string name="description_halfbody">Half Body</string>
     <string name="description_split">Split</string>
     <string name="description_custom">Custom</string>
+    <string name="fb_day1">Jour 1</string>
+    <string name="fb_day2">Jour 2</string>
+    <string name="fb_day3">Jour 3</string>
+    <string name="split_day1">Jour 1</string>
+    <string name="split_day2">Jour 2</string>
+    <string name="split_day3">Jour 3</string>
+    <string name="split_day4">Jour 4</string>
+    <string name="split_day5">Jour 5</string>
+    <string name="split_day6">Jour 6</string>
+    <string name="hf_day1">Jour 1</string>
+    <string name="hf_day2">Jour 2</string>
+    <string name="hf_day3">Jour 3</string>
+    <string name="hf_day4">Jour 4</string>
+    <string name="ppl_day1">Jour 1</string>
+    <string name="ppl_day2">Jour 2</string>
+    <string name="ppl_day3">Jour 3</string>
+    <string name="ppl_day4">Jour 4</string>
+    <string name="ppl_day5">Jour 5</string>
+    <string name="ppl_day6">Jour 6</string>
+
+
 </resources>
