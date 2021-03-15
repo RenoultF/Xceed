@@ -25,6 +25,7 @@
         <activity android:name=".ui.entrainement.HfActivity"/>
         <activity android:name=".ui.entrainement.PplActivity"/>
         <activity android:name=".ui.entrainement.SplitActivity"/>
+        <activity android:name=".ui.exercice.ExerciceActivity"/>
 
     </application>
 
