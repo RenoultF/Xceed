@@ -17,6 +17,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NavUtils;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
@@ -58,6 +59,9 @@ public class FbActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_fb.class);
+                intent.putExtra("DayNum",R.string.fb_day1);
+                startActivity(intent);
 
             }
         });

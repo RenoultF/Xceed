@@ -1,12 +1,29 @@
 package com.example.xceed.ui.exercice;
 
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.SeekBar;
+import android.widget.TextView;
+
+import com.example.xceed.ui.entrainement.Sets;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Exercice {
 
     private String nomExercice;
     private String descriptionExercice;
     private String categorie;
+    public List<Sets> setsToDo = new ArrayList<>();
 
-    private int nbSerie;
+    // This variable holds the info for the sets done
+    public List<Sets> curset = new ArrayList<>();
+
+    public int setsDone;
+
+    public int numOfSets;
 
     private int idGif;
 
@@ -15,6 +32,7 @@ public class Exercice {
         this.descriptionExercice = dE;
         this.idGif = idGif;
         this.categorie = categorie;
+
     }
 
     public String getNomExerciceEx() {
@@ -22,7 +40,7 @@ public class Exercice {
     }
 
     public int getNbSerie() {
-        return nbSerie;
+        return numOfSets;
     }
 
     public String getDescriptionExercice() {

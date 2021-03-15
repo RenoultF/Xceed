@@ -26,7 +26,7 @@
         <activity android:name=".ui.entrainement.PplActivity"/>
         <activity android:name=".ui.entrainement.SplitActivity"/>
         <activity android:name=".ui.exercice.ExerciceActivity"/>
-
+        <activity android:name=".ui.entrainement.Entrainement_fb"/>
     </application>
 
 </manifest>
