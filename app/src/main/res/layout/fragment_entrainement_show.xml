@@ -12,7 +12,7 @@
 <LinearLayout
     android:id="@+id/stuff"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:isScrollContainer="true"
     android:orientation="vertical"
     android:overScrollMode="ifContentScrolls">
@@ -35,4 +35,4 @@
 
 
 
-        </ScrollView>
+</ScrollView>
