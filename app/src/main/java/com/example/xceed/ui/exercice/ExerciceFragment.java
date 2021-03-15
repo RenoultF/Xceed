@@ -68,14 +68,19 @@ public class ExerciceFragment extends Fragment {
 
 
         lunch_dc =(Button) root.findViewById(R.id.button);
+        int comp=0;
         for(Button i : all_buton){
             i.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(ExerciceFragment.this.getActivity(), ExerciceActivity.class);
+                    intent.putExtra("ButtonId",i.getId());
+
                     startActivity(intent);
+
                 }
             });
+            comp+=1;
         }/*
         lunch_dc.setOnClickListener(new View.OnClickListener() {
 

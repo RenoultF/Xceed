@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ui.chronometre.ChronometreFragment">
+    tools:context=".ui.chronometre.ChronometreFragment"
+    android:background="@drawable/grad">
 
     <Chronometer
         android:id="@+id/simpleChronometer"
