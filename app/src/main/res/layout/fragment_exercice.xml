@@ -21,6 +21,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx1"
                 android:layout_width="112dp"
                 android:layout_height="73dp"
                 android:src="@drawable/img_dev_couch"
@@ -79,6 +80,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx2"
                 android:layout_width="112dp"
                 android:layout_height="73dp"
                 android:src="@drawable/dev_couch_incline"
@@ -137,6 +139,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx3"
                 android:layout_width="112dp"
                 android:layout_height="73dp"
                 android:src="@drawable/dev_couch_decli"
@@ -193,6 +196,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx4"
                 android:layout_width="115dp"
                 android:layout_height="73dp"
                 android:src="@drawable/pompe"
@@ -249,6 +253,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx5"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/ecarte_haltere"
@@ -305,6 +310,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx6"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/ecarte_poulie"
@@ -361,6 +367,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx7"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/dev_couch_haltere"
@@ -417,6 +424,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx8"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/dev_couch_incli_haltere"
@@ -473,6 +481,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx9"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/butterfly"
@@ -529,6 +538,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx10"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/traction"
@@ -585,6 +595,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx11"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/tirage_vertical"
@@ -641,6 +652,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx12"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/rowing_barre"
@@ -697,6 +709,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx13"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/tirage_bucheron"
@@ -753,6 +766,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx14"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/tirage_vertical_prise_serre"
@@ -810,6 +824,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx15"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/soulever_de_terre"
@@ -866,6 +881,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx16"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/curl_barre"
@@ -922,6 +938,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx17"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/curl_concentre_haltere"
@@ -978,6 +995,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx18"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/curl_prise_marteau"
@@ -1034,6 +1052,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx19"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/curl_larry_scott"
@@ -1090,6 +1109,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx20"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/dips"
@@ -1146,6 +1166,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx21"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/extension_couche_barre"
@@ -1202,6 +1223,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx22"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/extension_poulie"
@@ -1258,6 +1280,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx23"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/extension_incline_poulie"
@@ -1314,6 +1337,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx24"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/extension_vertical_haltere"
@@ -1370,6 +1394,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx25"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/squat"
@@ -1426,6 +1451,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx26"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/soulever_de_terre_jambe_tendu"
@@ -1482,6 +1508,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx27"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/leg_extension"
@@ -1538,6 +1565,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx28"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/press_cuisse"
@@ -1594,6 +1622,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx29"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/leg_curl"
@@ -1650,6 +1679,7 @@
             android:layout_marginRight="10dp">
 
             <ImageView
+                android:id="@+id/imgEx30"
                 android:layout_width="107dp"
                 android:layout_height="73dp"
                 android:src="@drawable/fente"

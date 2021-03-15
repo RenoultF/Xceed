@@ -24,7 +24,7 @@ public class Entrainement {
         this.nbRep=nbRep;
         this.lstExercices = new ArrayList<Exercice>(lstExercices);
         for (Exercice temp : lstExercices) {
-            setsToDo.add(new Sets(this.nbRep,100,temp.getEx(),true));
+            setsToDo.add(new Sets(this.nbRep,100,temp.getNomExerciceEx(),true));
         }
 
     }
