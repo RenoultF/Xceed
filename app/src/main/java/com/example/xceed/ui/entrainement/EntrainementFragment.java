@@ -56,6 +56,7 @@ public class EntrainementFragment extends Fragment {
         lunch_hf =(Button) root.findViewById(R.id.buttone3);
         lunch_ppl =(Button) root.findViewById(R.id.buttone1);
         lunch_split =(Button) root.findViewById(R.id.buttone4);
+
         lunch_fb.setOnClickListener(new View.OnClickListener() {
 
 
