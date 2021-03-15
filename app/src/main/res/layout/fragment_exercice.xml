@@ -781,7 +781,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="115dp"
                 android:layout_marginTop="5dp"
-                android:text="Tirage Bucheron (Haltere)"
+                android:text="Tirage Vertical Prise serrée (Poulie)"
                 android:textColor="@color/white" />
 
             <TextView
