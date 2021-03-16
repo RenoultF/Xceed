@@ -9,85 +9,75 @@
     tools:context=".ui.chronometre.ChronometreFragment"
     android:background="@drawable/grad">
 
-    <Chronometer
-        android:id="@+id/simpleChronometer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="#000"
-        android:gravity="center"
-        android:padding="100dp"
-        android:textColor="#f00"
-        android:textStyle="bold"
-        android:textSize="52sp"/>
+        <Chronometer
+            android:id="@+id/simpleChronometer"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="#f00"
+            android:textSize="52sp"
+            android:textStyle="bold" />
 
 
-    <ImageButton
-        android:id="@+id/startButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_below="@+id/simpleChronometer"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/play"
+        <ImageButton
+            android:layout_below="@+id/simpleChronometer"
+            android:id="@+id/stopButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/pause"
+            android:text="@string/stop" />
 
-        />
+        <ImageButton
+            android:layout_below="@+id/simpleChronometer"
+            android:id="@+id/startButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/stopButton"
+            android:scaleType="fitCenter"
+            android:src="@drawable/play"
 
-    <ImageButton
-        android:id="@+id/stopButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_below="@+id/startButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/pause"
-        android:padding="0dp"
-        android:text="@string/stop" />
+            />
 
     <ImageButton
         android:id="@+id/restartButton"
         android:layout_width="70dp"
-        android:padding="0dp"
         android:layout_height="70dp"
-        android:layout_below="@+id/stopButton"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:layout_below="@+id/simpleChronometer"
+        android:layout_toRightOf="@+id/stopButton"
         android:src="@drawable/replay"
+        android:scaleType="fitCenter"
         android:text="@string/restart" />
 
-    <Button
-        android:id="@+id/setFormat"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/restartButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="@string/setFormat" />
+        <Button
+            android:id="@+id/setFormat"
+            android:layout_below="@+id/stopButton"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerInside"
+            android:layout_centerHorizontal="true"
+            android:text="@string/setFormat" />
 
-    <Button
-        android:id="@+id/clearFormat"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/setFormat"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="@string/clearFormat" />
+        <Button
+            android:id="@+id/clearFormat"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/setFormat"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="@string/clearFormat" />
+
+
     <!-- chronometer with black background and red text color -->
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/clearFormat"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="94dp"
-        android:text="@string/chronometerInAndroid"
-        android:textColor="#FF0000"
-        android:textSize="15dp"
-        android:textStyle="bold" />
 
 
 </RelativeLayout>
