@@ -16,14 +16,20 @@
             android:id="@+id/item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_chrono"
+
             android:textSize="20dp"
             android:textColor="@color/colorPrimary"/>
         <TextView
-            android:id="@+id/item_name2"
+            android:id="@+id/item_reps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_chrono"
+
             android:layout_below="@+id/item_name"/>
+        <TextView
+            android:id="@+id/item_setsnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/item_reps"/>
     </RelativeLayout>
 </LinearLayout>

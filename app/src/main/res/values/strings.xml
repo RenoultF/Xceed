@@ -36,6 +36,9 @@
     <string name="ppl_day4">Jour 4</string>
     <string name="ppl_day5">Jour 5</string>
     <string name="ppl_day6">Jour 6</string>
+    <string name="lefting">Il vous reste : </string>
+    <string name="setSsize">" Series restantes: "</string>
+    <string name="repetitions">répétition(s)</string>
 
 
 </resources>

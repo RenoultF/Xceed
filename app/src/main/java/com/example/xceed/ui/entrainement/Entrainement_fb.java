@@ -387,10 +387,10 @@ public class Entrainement_fb extends AppCompatActivity {
         //list of sets
         List<Sets> sets = new ArrayList<>();
 
-        sets.add(new Sets(15,10,"Exercice DC",true));
-        sets.add(new Sets(10,10,"Exercice C",true));
-        sets.add(new Sets(12,10,"Exercice aC",true));
-        sets.add(new Sets(18,10,"Exercice bC",true));
+        sets.add(new Sets(15,10,new Exercice("Developpé couché (Barre)","Ceci est du dev Couch",R.drawable.gif_dc,"Pectoraux"),true));
+        sets.add(new Sets(10,10,new Exercice("Developpé couché incliné (Barre)","Ceci est du dev Couch incliné",R.drawable.gif_devinc,"Pectoraux (Haut)"),true));
+        sets.add(new Sets(12,10,new Exercice("Developpé couché décliné (Barre)","Ceci est du dev Couch décliné",R.drawable.gif_devdec, "Pectoraux (Bas)"),true));
+        sets.add(new Sets(18,10,new Exercice("Ecarté (Haltere)","Ceci est de l'écarté",R.drawable.gif_ecarte, "Pectoraux"),true));
         //get list view
         ListView lstView = findViewById(R.id.ListView1);
         lstView.setAdapter(new SetsAdapter(this,sets));
