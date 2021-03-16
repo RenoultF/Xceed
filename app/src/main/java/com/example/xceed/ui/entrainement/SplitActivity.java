@@ -45,10 +45,11 @@ public class SplitActivity extends Activity {
         day3 =  (Button)findViewById(R.id.split_day3);
         day4 =  (Button)findViewById(R.id.split_day4);
         day5 =  (Button)findViewById(R.id.split_day5);
+        day6= (Button)findViewById(R.id.split_day6);
 
 
         // Get the Intent that started this activity and extract the string
-        Intent intent = getIntent();
+        //Intent intent = getIntent();
         //String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
         // Capture the layout's TextView and set the string as its text
@@ -63,7 +64,7 @@ public class SplitActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_split.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.split_day1));
+                intent.putExtra("DayNum",day1.getId());
                 startActivity(intent);
 
             }
@@ -77,7 +78,7 @@ public class SplitActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_split.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.split_day1));
+                intent.putExtra("DayNum",day2.getId());
                 startActivity(intent);
 
             }
@@ -91,7 +92,7 @@ public class SplitActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_split.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.split_day1));
+                intent.putExtra("DayNum",day3.getId());
                 startActivity(intent);
 
             }
@@ -105,7 +106,7 @@ public class SplitActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_split.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.split_day1));
+                intent.putExtra("DayNum",day4.getId());
                 startActivity(intent);
 
             }
@@ -118,6 +119,23 @@ public class SplitActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_split.class);
+                intent.putExtra("DayNum",day5.getId());
+                startActivity(intent);
+
+            }
+        });
+        day6.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                /*TextView view = new TextView(ViewOnClick.this);
+                view.setText(++i+" view");
+                ll.addView(view, layoutParams);*/
+                //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_split.class);
+                intent.putExtra("DayNum",day6.getId());
+                startActivity(intent);
 
             }
         });

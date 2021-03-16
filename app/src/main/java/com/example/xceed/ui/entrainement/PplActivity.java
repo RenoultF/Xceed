@@ -64,7 +64,7 @@ public class PplActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_ppl.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.ppl_day1));
+                intent.putExtra("DayNum",day1.getId());
                 startActivity(intent);
 
             }
@@ -78,7 +78,7 @@ public class PplActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_ppl.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.ppl_day1));
+                intent.putExtra("DayNum",day2.getId());
                 startActivity(intent);
 
             }
@@ -92,7 +92,7 @@ public class PplActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_ppl.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.ppl_day1));
+                intent.putExtra("DayNum",day3.getId());
                 startActivity(intent);
 
             }
@@ -106,7 +106,7 @@ public class PplActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_ppl.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.ppl_day1));
+                intent.putExtra("DayNum",day4.getId());
                 startActivity(intent);
 
             }
@@ -120,7 +120,7 @@ public class PplActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_ppl.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.ppl_day1));
+                intent.putExtra("DayNum",day5.getId());
                 startActivity(intent);
 
             }
@@ -134,7 +134,7 @@ public class PplActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_ppl.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.ppl_day1));
+                intent.putExtra("DayNum",day6.getId());
                 startActivity(intent);
 
             }

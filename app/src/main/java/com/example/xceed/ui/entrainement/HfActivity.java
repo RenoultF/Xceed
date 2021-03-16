@@ -61,7 +61,7 @@ public class HfActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_hf.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.hf_day1));
+                intent.putExtra("DayNum",day1.getId());
                 startActivity(intent);
 
             }
@@ -75,7 +75,7 @@ public class HfActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_hf.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.hf_day2));
+                intent.putExtra("DayNum",day2.getId());
                 startActivity(intent);
 
             }
@@ -89,7 +89,7 @@ public class HfActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_hf.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.hf_day3));
+                intent.putExtra("DayNum",day3.getId());
                 startActivity(intent);
 
             }
@@ -103,7 +103,7 @@ public class HfActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_hf.class);
-                intent.putExtra("DayNum",v.getResources().getString(R.string.hf_day4));
+                intent.putExtra("DayNum",day4.getId());
                 startActivity(intent);
             }
         });

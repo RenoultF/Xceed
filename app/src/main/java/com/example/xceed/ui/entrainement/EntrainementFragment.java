@@ -68,6 +68,7 @@ public class EntrainementFragment extends Fragment {
                     // TODO Auto-generated method stub
 
                         Intent intent = new Intent(EntrainementFragment.this.getActivity(), FbActivity.class);
+
                         startActivity(intent);
                 }
             });
@@ -78,8 +79,8 @@ public class EntrainementFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-
-                startActivity(new Intent(EntrainementFragment.this.getActivity(), SplitActivity.class));            }
+                Intent intent=new Intent(EntrainementFragment.this.getActivity(), SplitActivity.class);
+                startActivity(intent);            }
         });
         lunch_ppl.setOnClickListener(new View.OnClickListener() {
 
