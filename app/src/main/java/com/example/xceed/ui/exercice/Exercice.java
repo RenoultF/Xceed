@@ -23,11 +23,11 @@ public class Exercice {
     public List<Sets> curset = new ArrayList<>();
 
     public int setsDone;
-
-    public int numOfSets;
-/*debut modif 15-03-21*/
     private final int idGif;
-    public TextView textUI;
+    public int numOfSets;
+//debut modif 15-03-21
+
+   /* public TextView textUI;
     public SeekBar seekSets;
     public SeekBar seekReps;
     public EditText weightUI;
@@ -106,10 +106,10 @@ public class Exercice {
             curset.add(new Sets(0, weight[i],this.getNomExerciceEx(),false));
         }
 
-        /*setsToDo = AssignedExcers.getAmrap(setsToDo);
-        curset = AssignedExcers.getAmrap(curset);*/
-    }/*fin modif 15-03-21*/
-
+        //setsToDo = AssignedExcers.getAmrap(setsToDo);
+        //curset = AssignedExcers.getAmrap(curset);
+    }//fin modif
+*/
     public Exercice(String nom, String dE, int idGif, String categorie){
         this.nomExercice = nom;
         this.descriptionExercice = dE;
@@ -120,7 +120,7 @@ public class Exercice {
     }
 
     public String getNomExerciceEx() {
-        return nomExercice;
+        return this.nomExercice;
     }
 
     public int getNbSerie() {

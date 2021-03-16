@@ -42,7 +42,7 @@ public class Entrainement_fb extends AppCompatActivity {
     }
     public Entrainement_fb(){
         super();
-    }
+    }/*
     private void didSet(View view, Exercice excersize) {
 
         SeekBar numOfSets = excersize.seekSets;
@@ -62,9 +62,9 @@ public class Entrainement_fb extends AppCompatActivity {
             numOfSets.refreshDrawableState();
 
             final View finalView =view;
-          /*  WorkTimer work = new WorkTimer(finalView, currentWorkTimer);
+          //WorkTimer work = new WorkTimer(finalView, currentWorkTimer);
 
-            currentWorkTimer = work;*/
+            //currentWorkTimer = work;
         }
 
         else{
@@ -265,7 +265,7 @@ public class Entrainement_fb extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         intent = getIntent();
-/*
+
         final int MARGIN_TOP = 8;
         final int MARGIN_LEFT = 8;
         final int MARGIN_BOTTOM = 0;
@@ -301,7 +301,7 @@ public class Entrainement_fb extends AppCompatActivity {
 
             }
             linearLayout.removeView(lstTxtView.get(lstTxtView.size()-1));
-*/
+
             setContentView(R.layout.fragment_entrainement_show);
 
             String[] slExcersizes = getIntent().getStringArrayExtra("Excersizes");
@@ -319,7 +319,7 @@ public class Entrainement_fb extends AppCompatActivity {
             for(int i=0;i<slExcersizes.length;i++){
                 lexcersizes[i]=new Exercice("DC","test",0,"haut");
             }
-            /*LastWorkout todaysWorkout = ExternalStore.getLastidxProp(0);
+            LastWorkout todaysWorkout = ExternalStore.getLastidxProp(0);
 
             boolean lastWorkoutOnPause;
 
@@ -339,7 +339,7 @@ public class Entrainement_fb extends AppCompatActivity {
                 for (int i = 0; i < slExcersizes.length; i++) {
                     lexcersizes[i] = new Excersize(slExcersizes[i], metaNext.get(i).excersizeWeight);
                 }
-            }*/
+            }
 
             for (int i =0; i < slExcersizes.length; i++) {
                 createExcerUI(lexcersizes[i], ll);
@@ -376,6 +376,6 @@ public class Entrainement_fb extends AppCompatActivity {
         long year = getIntent().getLongExtra("year", 0);
 
         return year + "-" + appendZero(String.valueOf(month)) + "-" + appendZero(String.valueOf(day));
-    }
+    }*/
 }
 
