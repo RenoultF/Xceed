@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -15,12 +16,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.xceed.GifImageView;
 import com.example.xceed.R;
+import com.example.xceed.SetsAdapter;
 import com.example.xceed.ui.exercice.Exercice;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 public class Entrainement_fb extends AppCompatActivity {
     private Intent intent;
@@ -377,5 +380,20 @@ public class Entrainement_fb extends AppCompatActivity {
 
         return year + "-" + appendZero(String.valueOf(month)) + "-" + appendZero(String.valueOf(day));
     }*/
+    @Override
+    protected void onCreate(Bundle savecInstanceState){
+        super.onCreate(savecInstanceState);
+        setContentView(R.layout.fragment_entrainement_show);
+        //list of sets
+        List<Sets> sets = new ArrayList<>();
+
+        sets.add(new Sets(15,10,"Exercice DC",true));
+        sets.add(new Sets(10,10,"Exercice C",true));
+        sets.add(new Sets(12,10,"Exercice aC",true));
+        sets.add(new Sets(18,10,"Exercice bC",true));
+        //get list view
+        ListView lstView = findViewById(R.id.ListView1);
+        lstView.setAdapter(new SetsAdapter(this,sets));
+    }
 }
 
