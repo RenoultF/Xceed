@@ -62,6 +62,9 @@ public class SplitActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_split.class);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.split_day1));
+                startActivity(intent);
 
             }
         });
@@ -73,6 +76,9 @@ public class SplitActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_split.class);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.split_day1));
+                startActivity(intent);
 
             }
         });
@@ -84,6 +90,9 @@ public class SplitActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_split.class);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.split_day1));
+                startActivity(intent);
 
             }
         });
@@ -95,6 +104,9 @@ public class SplitActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_split.class);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.split_day1));
+                startActivity(intent);
 
             }
         });

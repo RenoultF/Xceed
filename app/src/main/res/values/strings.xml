@@ -39,6 +39,7 @@
     <string name="lefting">Il vous reste : </string>
     <string name="setSsize">" Series restantes: "</string>
     <string name="repetitions">répétition(s)</string>
+    <string name="open">ouvrir</string>
 
 
 </resources>

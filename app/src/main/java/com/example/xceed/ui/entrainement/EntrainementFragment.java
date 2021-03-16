@@ -52,6 +52,8 @@ public class EntrainementFragment extends Fragment {
         entrainement_split = new Entrainement_split(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));*/
 
         //entrainementRecup = entrainement.recupEntrainement(getContext());
+       // Intent intent =getIntent();
+       // intent.getExtras();
         lunch_fb =(Button) root.findViewById(R.id.buttone2);
         lunch_hf =(Button) root.findViewById(R.id.buttone3);
         lunch_ppl =(Button) root.findViewById(R.id.buttone1);

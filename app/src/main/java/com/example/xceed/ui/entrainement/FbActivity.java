@@ -60,7 +60,7 @@ public class FbActivity extends Activity {
                 ll.addView(view, layoutParams);*/
                 //TODO
                 Intent intent = new Intent(getApplicationContext(),Entrainement_fb.class);
-                intent.putExtra("DayNum",R.string.fb_day1);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.fb_day1));
                 startActivity(intent);
 
             }
@@ -73,6 +73,9 @@ public class FbActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_fb.class);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.fb_day2));
+                startActivity(intent);
 
             }
         });
@@ -83,6 +86,9 @@ public class FbActivity extends Activity {
                 /*TextView view = new TextView(ViewOnClick.this);
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
+                Intent intent = new Intent(getApplicationContext(),Entrainement_fb.class);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.fb_day3));
+                startActivity(intent);
                 //TODO
 
             }

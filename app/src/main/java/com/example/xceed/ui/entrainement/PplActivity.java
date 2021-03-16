@@ -63,6 +63,9 @@ public class PplActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_ppl.class);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.ppl_day1));
+                startActivity(intent);
 
             }
         });
@@ -74,6 +77,9 @@ public class PplActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_ppl.class);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.ppl_day1));
+                startActivity(intent);
 
             }
         });
@@ -85,6 +91,9 @@ public class PplActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_ppl.class);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.ppl_day1));
+                startActivity(intent);
 
             }
         });
@@ -96,6 +105,9 @@ public class PplActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_ppl.class);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.ppl_day1));
+                startActivity(intent);
 
             }
         });
@@ -107,6 +119,9 @@ public class PplActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_ppl.class);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.ppl_day1));
+                startActivity(intent);
 
             }
         });
@@ -118,6 +133,9 @@ public class PplActivity extends Activity {
                 view.setText(++i+" view");
                 ll.addView(view, layoutParams);*/
                 //TODO
+                Intent intent = new Intent(getApplicationContext(),Entrainement_ppl.class);
+                intent.putExtra("DayNum",v.getResources().getString(R.string.ppl_day1));
+                startActivity(intent);
 
             }
         });

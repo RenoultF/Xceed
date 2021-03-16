@@ -27,6 +27,9 @@
         <activity android:name=".ui.entrainement.SplitActivity"/>
         <activity android:name=".ui.exercice.ExerciceActivity"/>
         <activity android:name=".ui.entrainement.Entrainement_fb"/>
+        <activity android:name=".ui.entrainement.Entrainement_hf"/>
+        <activity android:name=".ui.entrainement.Entrainement_ppl"/>
+        <activity android:name=".ui.entrainement.Entrainement_split"/>
     </application>
 
 </manifest>

@@ -16,7 +16,9 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.xceed.R;
+import com.example.xceed.ui.entrainement.Entrainement;
 import com.example.xceed.ui.entrainement.EntrainementFragment;
+import com.example.xceed.ui.entrainement.Entrainement_fb;
 import com.example.xceed.ui.entrainement.FbActivity;
 
 import java.util.ArrayList;
@@ -29,6 +31,7 @@ public class ExerciceFragment extends Fragment {
     private List<ImageView> all_buton;
 
     public static ArrayList<Exercice> listExercice;
+    public static List<Button> lstbtnadd;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -68,6 +71,38 @@ public class ExerciceFragment extends Fragment {
         all_buton.add((ImageView) root.findViewById(R.id.imgEx28));
         all_buton.add((ImageView) root.findViewById(R.id.imgEx29));
         all_buton.add((ImageView) root.findViewById(R.id.imgEx30));
+
+        /*lstbtnadd.add((Button) root.findViewById(R.id.button1));
+        lstbtnadd.add((Button) root.findViewById(R.id.button2));
+        lstbtnadd.add((Button) root.findViewById(R.id.button3));
+        lstbtnadd.add((Button) root.findViewById(R.id.button4));
+        lstbtnadd.add((Button) root.findViewById(R.id.button5));
+        lstbtnadd.add((Button) root.findViewById(R.id.button6));
+        lstbtnadd.add((Button) root.findViewById(R.id.button7));
+        lstbtnadd.add((Button) root.findViewById(R.id.button8));
+        lstbtnadd.add((Button) root.findViewById(R.id.button9));
+        lstbtnadd.add((Button) root.findViewById(R.id.button10));
+        lstbtnadd.add((Button) root.findViewById(R.id.button11));
+        lstbtnadd.add((Button) root.findViewById(R.id.button12));
+        lstbtnadd.add((Button) root.findViewById(R.id.button13));
+        lstbtnadd.add((Button) root.findViewById(R.id.button14));
+        lstbtnadd.add((Button) root.findViewById(R.id.button15));
+        lstbtnadd.add((Button) root.findViewById(R.id.button16));
+        lstbtnadd.add((Button) root.findViewById(R.id.button17));
+        lstbtnadd.add((Button) root.findViewById(R.id.button18));
+        lstbtnadd.add((Button) root.findViewById(R.id.button19));
+        lstbtnadd.add((Button) root.findViewById(R.id.button20));
+        lstbtnadd.add((Button) root.findViewById(R.id.button21));
+        lstbtnadd.add((Button) root.findViewById(R.id.button22));
+        lstbtnadd.add((Button) root.findViewById(R.id.button23));
+        lstbtnadd.add((Button) root.findViewById(R.id.button23));
+        lstbtnadd.add((Button) root.findViewById(R.id.button24));
+        lstbtnadd.add((Button) root.findViewById(R.id.button25));
+        lstbtnadd.add((Button) root.findViewById(R.id.button26));
+        lstbtnadd.add((Button) root.findViewById(R.id.button27));
+        lstbtnadd.add((Button) root.findViewById(R.id.button28));
+        lstbtnadd.add((Button) root.findViewById(R.id.button29));
+        lstbtnadd.add((Button) root.findViewById(R.id.button30));*/
         //ajout des exercice
         listExercice.add(new Exercice("Developpé couché (Barre)","Ceci est du dev Couch",R.drawable.gif_dc,"Pectoraux"));
         listExercice.add(new Exercice("Developpé couché incliné (Barre)","Ceci est du dev Couch incliné",R.drawable.gif_devinc,"Pectoraux (Haut)"));
@@ -99,6 +134,19 @@ public class ExerciceFragment extends Fragment {
         listExercice.add(new Exercice("Press Cuisse","Ceci est du Press Cuisse",R.drawable.gif_press_cuisse, "Jambe"));
         listExercice.add(new Exercice("Leg Curl","Ceci est du Leg Curl",R.drawable.gif_leg_curl, "Jambe"));
         listExercice.add(new Exercice("Fente (Haltere)","Ceci est des fentes",R.drawable.gif_fente, "Jambe"));
+
+
+        /*for(Button i : lstbtnadd){
+            i.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(ExerciceFragment.this.getActivity(), Entrainement_fb.class);
+                    intent.putExtra("ButtonId",i.getId());
+                    startActivity(intent);
+
+                }
+            });
+        }*/
 
 
 
