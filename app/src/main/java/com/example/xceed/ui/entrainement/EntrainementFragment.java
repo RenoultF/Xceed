@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,8 +17,10 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.xceed.AdapterWorkoutFragment;
 import com.example.xceed.MainActivity;
 import com.example.xceed.R;
+import com.example.xceed.SetsAdapter;
 import com.example.xceed.ui.entrainement.EntrainementViewModel;
 import com.example.xceed.ui.exercice.Exercice;
 import com.example.xceed.ui.profil.ProfilFragment;
@@ -25,8 +28,11 @@ import com.example.xceed.ui.profil.ProfilViewModel;
 import com.goodiebag.protractorview.ProtractorView;
 import com.xw.repo.BubbleSeekBar;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by Alkassoum
  */
@@ -47,63 +53,15 @@ public class EntrainementFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         entrainementViewModel =
                 new ViewModelProvider(this).get(EntrainementViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_entrainement, container, false);
+        View root = inflater.inflate(R.layout.workout_show, container, false);
         /*entrainement_fb = new Entrainement_fb(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));
         entrainement_hf = new Entrainement_hf(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));
         entrainement_ppl = new Entrainement_ppl(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));
         entrainement_split = new Entrainement_split(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));*/
 
-        //entrainementRecup = entrainement.recupEntrainement(getContext());
-       // Intent intent =getIntent();
-       // intent.getExtras();
-        lunch_fb =(Button) root.findViewById(R.id.buttone2);
-        lunch_hf =(Button) root.findViewById(R.id.buttone3);
-        lunch_ppl =(Button) root.findViewById(R.id.buttone1);
-        lunch_split =(Button) root.findViewById(R.id.buttone4);
+        ListView lstView = root.findViewById(R.id.workout_show);
+        lstView.setAdapter(new AdapterWorkoutFragment(getActivity(),EntrainementActivity.listEntrainement));
 
-        lunch_fb.setOnClickListener(new View.OnClickListener() {
-
-
-
-                @Override
-                public void onClick(View v) {
-                    // TODO Auto-generated method stub
-
-                        Intent intent = new Intent(EntrainementFragment.this.getActivity(), FbActivity.class);
-
-                        startActivity(intent);
-                }
-            });
-        lunch_split.setOnClickListener(new View.OnClickListener() {
-
-
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Intent intent=new Intent(EntrainementFragment.this.getActivity(), SplitActivity.class);
-                startActivity(intent);            }
-        });
-        lunch_ppl.setOnClickListener(new View.OnClickListener() {
-
-
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-                startActivity(new Intent(EntrainementFragment.this.getActivity(), PplActivity.class));            }
-        });
-        lunch_hf.setOnClickListener(new View.OnClickListener() {
-
-
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-                startActivity(new Intent(EntrainementFragment.this.getActivity(), HfActivity.class));            }
-        });
 
         return root;
     }

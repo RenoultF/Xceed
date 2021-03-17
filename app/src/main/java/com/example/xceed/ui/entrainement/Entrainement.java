@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.xceed.AdapterExercice;
 import com.example.xceed.R;
 import com.example.xceed.SetsAdapter;
 import com.example.xceed.ui.exercice.Exercice;
@@ -21,10 +22,16 @@ import com.example.xceed.ui.exercice.Exercice;
  * Created by Alkassoum
  */
 public class Entrainement extends AppCompatActivity {
-    private LinkedList<Sets> sets;
+    public LinkedList<Sets> sets;
     private LinkedList<Sets> setsDone;
-    private ArrayList<Exercice> lstExercices;
+    public ArrayList<Exercice> lstExercices;
     public String nomEntrainement;
+    public Entrainement(){
+
+
+
+
+    }
     public Entrainement(String nomEntrainement){
 
 
@@ -55,9 +62,15 @@ public void addExercice(Exercice a){
         super.onCreate(savecInstanceState);
         setContentView(R.layout.fragment_entrainement_show);
         //list of sets
-        List<Sets> sets=new ArrayList<Sets>();
+        List<Exercice> sets=new ArrayList<Exercice>();
 
-        int c = getIntent().getIntExtra("DayNum",0);
+        int c = getIntent().getIntExtra("Numinlst",0);
+
+        for(Exercice e :EntrainementActivity.listEntrainement.get(c).lstExercices){
+            sets.add(e);
+        }
+        ListView lstView = findViewById(R.id.ListView1);
+        lstView.setAdapter(new AdapterExercice(this,sets));
         int indiceExercice = 0;
         /*switch (c){
             case R.id.button1:

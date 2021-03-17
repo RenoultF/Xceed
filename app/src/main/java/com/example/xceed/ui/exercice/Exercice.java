@@ -124,7 +124,7 @@ public class Exercice {
     }
 
     public int getNbSerie() {
-        return numOfSets;
+        return 4;
     }
 
     public String getDescriptionExercice() {
