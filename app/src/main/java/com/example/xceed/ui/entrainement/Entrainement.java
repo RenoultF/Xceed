@@ -3,26 +3,33 @@ package com.example.xceed.ui.entrainement;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.example.xceed.ui.exercice.Exercice;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class Entrainement {
-    private LinkedList<Sets> setsToDo;
+import com.example.xceed.R;
+import com.example.xceed.SetsAdapter;
+import com.example.xceed.ui.exercice.Exercice;
+/**
+ * Created by Alkassoum
+ */
+public class Entrainement extends AppCompatActivity {
+    private LinkedList<Sets> sets;
     private LinkedList<Sets> setsDone;
     private ArrayList<Exercice> lstExercices;
-    private int nbSets;
-    protected int nbJours;
-    private int nbRep;
-    public Entrainement(int nbSets,int nbRep,LinkedList<Exercice> lstExercices){
-        this.nbSets=nbSets;
-        this.nbJours = 0;
-        this.nbRep=nbRep;
-        this.lstExercices = new ArrayList<Exercice>(lstExercices);
+    public String nomEntrainement;
+    public Entrainement(String nomEntrainement){
+
+
+        this.lstExercices = new ArrayList<Exercice>();
+        this.nomEntrainement = nomEntrainement;
         for (Exercice temp : lstExercices) {
            // setsToDo.add(new Sets(this.nbRep,100,temp.getNomExerciceEx(),true));
         }
@@ -30,34 +37,158 @@ public class Entrainement {
     }
 
 
-    public int getNbJours() {
-        return nbJours;
-    }
 
-    public int getNbRep() {
-        return nbRep;
-    }
 
-    public int getNbSets() {
-        return nbSets;
-    }
+
 
 
     public void setLstExercices(ArrayList<Exercice> lstExercices) {
         this.lstExercices = lstExercices;
     }
 
-    public void setNbJours(int nbJours) {
-        this.nbJours = nbJours;
-    }
 
-    public void setNbRep(int nbRep) {
+
+  /*  public void setNbRep(int nbRep) {
         this.nbRep = nbRep;
     }
+*/
 
-    public void setNbSets(int nbSets) {
-        this.nbSets = nbSets;
-    }
+    @Override
+    protected void onCreate(Bundle savecInstanceState){
+        super.onCreate(savecInstanceState);
+        setContentView(R.layout.fragment_entrainement_show);
+        //list of sets
+        List<Sets> sets=new ArrayList<Sets>();
+
+        int c = getIntent().getIntExtra("DayNum",0);
+        int indiceExercice = 0;
+        /*switch (c){
+            case R.id.button1:
+                indiceExercice = 0;
+                break;
+            case R.id.button2:
+                indiceExercice = 1;
+                break;
+            case R.id.button3:
+                indiceExercice = 2;
+                break;
+            case R.id.button4:
+                indiceExercice = 3;
+                break;
+            case R.id.button5:
+                indiceExercice = 4;
+                break;
+            case R.id.button6:
+                indiceExercice = 5;
+                break;
+            case R.id.button7:
+                indiceExercice = 6;
+                break;
+            case R.id.button8:
+                indiceExercice = 7;
+                break;
+            case R.id.button9:
+                indiceExercice = 8;
+                break;
+            case R.id.button10:
+                indiceExercice = 9;
+                break;
+            case R.id.button11:
+                indiceExercice = 10;
+                break;
+            case R.id.button12:
+                indiceExercice = 11;
+                break;
+            case R.id.button13:
+                indiceExercice = 12;
+                break;
+            case R.id.button14:
+                indiceExercice = 13;
+                break;
+            case R.id.button15:
+                indiceExercice = 14;
+                break;
+            case R.id.button16:
+                indiceExercice = 15;
+                break;
+            case R.id.button17:
+                indiceExercice = 16;
+                break;
+            case R.id.button18:
+                indiceExercice = 17;
+                break;
+            case R.id.button19:
+                indiceExercice = 18;
+                break;
+            case R.id.button20:
+                indiceExercice = 19;
+                break;
+            case R.id.button21:
+                indiceExercice = 20;
+                break;
+            case R.id.button22:
+                indiceExercice = 21;
+                break;
+            case R.id.button23:
+                indiceExercice = 22;
+                break;
+            case R.id.button24:
+                indiceExercice = 23;
+                break;
+            case R.id.button25:
+                indiceExercice = 24;
+                break;
+            case R.id.button26:
+                indiceExercice = 25;
+                break;
+            case R.id.button27:
+                indiceExercice = 26;
+                break;
+            case R.id.button28:
+                indiceExercice = 27;
+                break;
+            case R.id.button29:
+                indiceExercice = 28;
+                break;
+            case R.id.button30:
+                indiceExercice = 29;
+                break;
+        */}/*
+        switch (c){
+            case R.id.hf_day1://jour 1 hf body
+                sets.add(new Sets(15, 10, new Exercice("Developpé couché (Barre)", "Ceci est du dev Couch", R.drawable.gif_dc, "Pectoraux"), true));
+                sets.add(new Sets(10, 10, new Exercice("Developpé couché incliné (Barre)", "Ceci est du dev Couch incliné", R.drawable.gif_devinc, "Pectoraux (Haut)"), true));
+                sets.add(new Sets(12, 10, new Exercice("Developpé couché décliné (Barre)", "Ceci est du dev Couch décliné", R.drawable.gif_devdec, "Pectoraux (Bas)"), true));
+                sets.add(new Sets(18, 10, new Exercice("Ecarté (Haltere)", "Ceci est de l'écarté", R.drawable.gif_ecarte, "Pectoraux"), true));
+                break;
+            case R.id.hf_day2:
+                sets.add(new Sets(15, 10, new Exercice("Developpé couché (Barre)", "Ceci est du dev Couch", R.drawable.gif_dc, "Pectoraux"), true));
+                sets.add(new Sets(10, 10, new Exercice("Developpé couché incliné (Barre)", "Ceci est du dev Couch incliné", R.drawable.gif_devinc, "Pectoraux (Haut)"), true));
+                sets.add(new Sets(12, 10, new Exercice("Developpé couché décliné (Barre)", "Ceci est du dev Couch décliné", R.drawable.gif_devdec, "Pectoraux (Bas)"), true));
+                sets.add(new Sets(18, 10, new Exercice("Ecarté (Haltere)", "Ceci est de l'écarté", R.drawable.gif_ecarte, "Pectoraux"), true));
+                break;
+            case R.id.hf_day3:
+                sets.add(new Sets(15, 10, new Exercice("Developpé couché (Barre)", "Ceci est du dev Couch", R.drawable.gif_dc, "Pectoraux"), true));
+                sets.add(new Sets(10, 10, new Exercice("Developpé couché incliné (Barre)", "Ceci est du dev Couch incliné", R.drawable.gif_devinc, "Pectoraux (Haut)"), true));
+                sets.add(new Sets(12, 10, new Exercice("Developpé couché décliné (Barre)", "Ceci est du dev Couch décliné", R.drawable.gif_devdec, "Pectoraux (Bas)"), true));
+                sets.add(new Sets(18, 10, new Exercice("Ecarté (Haltere)", "Ceci est de l'écarté", R.drawable.gif_ecarte, "Pectoraux"), true));
+                break;
+            case R.id.hf_day4:
+                sets.add(new Sets(15, 10, new Exercice("Developpé couché (Barre)", "Ceci est du dev Couch", R.drawable.gif_dc, "Pectoraux"), true));
+                sets.add(new Sets(10, 10, new Exercice("Developpé couché incliné (Barre)", "Ceci est du dev Couch incliné", R.drawable.gif_devinc, "Pectoraux (Haut)"), true));
+                sets.add(new Sets(12, 10, new Exercice("Developpé couché décliné (Barre)", "Ceci est du dev Couch décliné", R.drawable.gif_devdec, "Pectoraux (Bas)"), true));
+                sets.add(new Sets(18, 10, new Exercice("Ecarté (Haltere)", "Ceci est de l'écarté", R.drawable.gif_ecarte, "Pectoraux"), true));
+                break;
+            default:
+
+                break;
+
+        }
+        // Entrainement_fb e=  new Entrainement_fb( new Sets(15,10,new Exercice("Developpé couché (Barre)","Ceci est du dev Couch",R.drawable.gif_dc,"Pectoraux"),true));
+        //get list view
+        ListView lstView = findViewById(R.id.list_entrainement);
+        lstView.setAdapter(new SetsAdapter(this,lis));
+    }}*/}
 
     //list for sets to do
     /*
@@ -160,5 +291,6 @@ public class Entrainement {
 
 
     }
-*/
+
 }
+*/

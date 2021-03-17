@@ -27,7 +27,9 @@ import com.xw.repo.BubbleSeekBar;
 
 import java.util.Collection;
 import java.util.LinkedList;
-
+/**
+ * Created by Alkassoum
+ */
 public class EntrainementFragment extends Fragment {
 
     private EntrainementViewModel entrainementViewModel;

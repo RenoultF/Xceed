@@ -12,7 +12,9 @@ import com.example.xceed.ui.exercice.Exercice;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
+/**
+ * Created by Alkassoum
+ */
 public class Entrainement_ppl extends AppCompatActivity {
     private int nbJours;
     public Entrainement_ppl(int nbSets, int nbRep, LinkedList<Exercice> lstExercices){

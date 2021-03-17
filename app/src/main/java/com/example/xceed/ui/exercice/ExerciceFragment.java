@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.xceed.R;
 import com.example.xceed.ui.entrainement.Entrainement;
+import com.example.xceed.ui.entrainement.EntrainementActivity;
 import com.example.xceed.ui.entrainement.EntrainementFragment;
 import com.example.xceed.ui.entrainement.Entrainement_fb;
 import com.example.xceed.ui.entrainement.FbActivity;
@@ -36,6 +37,7 @@ public class ExerciceFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        lstbtnadd=new ArrayList<Button>();
         all_buton = new ArrayList<ImageView>();
         listExercice = new ArrayList<Exercice>();
         exerciceViewModel =
@@ -72,7 +74,7 @@ public class ExerciceFragment extends Fragment {
         all_buton.add((ImageView) root.findViewById(R.id.imgEx29));
         all_buton.add((ImageView) root.findViewById(R.id.imgEx30));
 
-        /*lstbtnadd.add((Button) root.findViewById(R.id.button1));
+        lstbtnadd.add((Button) root.findViewById(R.id.button1));
         lstbtnadd.add((Button) root.findViewById(R.id.button2));
         lstbtnadd.add((Button) root.findViewById(R.id.button3));
         lstbtnadd.add((Button) root.findViewById(R.id.button4));
@@ -102,7 +104,7 @@ public class ExerciceFragment extends Fragment {
         lstbtnadd.add((Button) root.findViewById(R.id.button27));
         lstbtnadd.add((Button) root.findViewById(R.id.button28));
         lstbtnadd.add((Button) root.findViewById(R.id.button29));
-        lstbtnadd.add((Button) root.findViewById(R.id.button30));*/
+        lstbtnadd.add((Button) root.findViewById(R.id.button30));
         //ajout des exercice
         listExercice.add(new Exercice("Developpé couché (Barre)","Ceci est du dev Couch",R.drawable.gif_dc,"Pectoraux"));
         listExercice.add(new Exercice("Developpé couché incliné (Barre)","Ceci est du dev Couch incliné",R.drawable.gif_devinc,"Pectoraux (Haut)"));
@@ -136,17 +138,17 @@ public class ExerciceFragment extends Fragment {
         listExercice.add(new Exercice("Fente (Haltere)","Ceci est des fentes",R.drawable.gif_fente, "Jambe"));
 
 
-        /*for(Button i : lstbtnadd){
+        for(Button i : lstbtnadd){
             i.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(ExerciceFragment.this.getActivity(), Entrainement_fb.class);
+                    Intent intent = new Intent(ExerciceFragment.this.getActivity(), EntrainementActivity.class);
                     intent.putExtra("ButtonId",i.getId());
                     startActivity(intent);
 
                 }
             });
-        }*/
+        }
 
 
 

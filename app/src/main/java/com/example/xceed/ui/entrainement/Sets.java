@@ -1,7 +1,9 @@
 package com.example.xceed.ui.entrainement;
 
 import com.example.xceed.ui.exercice.Exercice;
-
+/**
+ * Created by Alkassoum
+ */
 public class Sets {
     public String exercice_Name;
     public double weight;

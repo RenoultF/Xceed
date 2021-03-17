@@ -10,17 +10,18 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.xceed.ui.entrainement.Entrainement;
 import com.example.xceed.ui.entrainement.Sets;
 
 import java.util.List;
 /**
  * Created by Alkassoum
  */
-public class SetsAdapter extends BaseAdapter {
+public class WorkoutAdapter extends BaseAdapter {
     private Context context;
-    private List<Sets> setsList;
+    private List<Entrainement> setsList;
     private LayoutInflater inflater;
-    public SetsAdapter(Context context, List<Sets> setsList){
+    public WorkoutAdapter(Context context, List<Entrainement> setsList){
         this.context = context;
         this.setsList=setsList;
         this.inflater=LayoutInflater.from(this.context);
@@ -34,7 +35,7 @@ public class SetsAdapter extends BaseAdapter {
     }
 
     @Override
-    public Sets getItem(int position) {
+    public Entrainement getItem(int position) {
         return setsList.get(position);
     }
 
@@ -45,22 +46,20 @@ public class SetsAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = inflater.inflate(R.layout.adapter_item,null);
+        convertView = inflater.inflate(R.layout.adapter_entrainement,null);
         // get info about item[pos]
-        Sets currentSet = getItem(position);
-        String itemName = currentSet.exercice.getNomExerciceEx();
-        double itemReps = currentSet.getReps();
+        Entrainement currentSet = getItem(position);
+        String itemName = currentSet.nomEntrainement;
         //editing adapter_item views
-        TextView itemNameView= convertView.findViewById(R.id.item_name);
-        TextView itemRepsView = convertView.findViewById(R.id.item_reps);
-       //ImageView itemImageView = convertView.findViewById(R.id.item_icon);
+        TextView itemNameView= convertView.findViewById(R.id.workout_name);
+        //ImageView itemImageView = convertView.findViewById(R.id.item_icon);
         TextView itemSetsnbView = convertView.findViewById(R.id.item_setsnumber);
 
         //itemImageView.set;
         itemNameView.setText(itemName);
-        itemRepsView.setText(context.getResources().getString(R.string.lefting)+" "+ itemReps +context.getResources().getString(R.string.repetitions) );
+       // itemRepsView.setText(context.getResources().getString(R.string.lefting)+" "+ itemReps +context.getResources().getString(R.string.repetitions) );
 
-        itemSetsnbView.setText(context.getResources().getString(R.string.setSsize) + " "+currentSet.exercice.numOfSets);
+        //itemSetsnbView.setText(context.getResources().getString(R.string.setSsize) + " "+currentSet.exercice.numOfSets);
 
 
 

@@ -40,6 +40,10 @@
     <string name="setSsize">" Series restantes: "</string>
     <string name="repetitions">répétition(s)</string>
     <string name="open">ouvrir</string>
+    <string name="add_fb">Full Body</string>
+    <string name="add_hb">Half Body</string>
+    <string name="add_ppl">PPL</string>
+    <string name="add_split">Spllit</string>
 
 
 </resources>

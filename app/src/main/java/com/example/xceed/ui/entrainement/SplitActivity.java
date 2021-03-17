@@ -33,7 +33,9 @@ import com.example.xceed.ui.profil.ProfilViewModel;
 import com.goodiebag.protractorview.ProtractorView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.xw.repo.BubbleSeekBar;
-
+/**
+ * Created by Alkassoum
+ */
 public class SplitActivity extends Activity {
     private Button day1,day2,day3,day4,day5,day6;
 
@@ -45,7 +47,7 @@ public class SplitActivity extends Activity {
         day3 =  (Button)findViewById(R.id.split_day3);
         day4 =  (Button)findViewById(R.id.split_day4);
         day5 =  (Button)findViewById(R.id.split_day5);
-        day6= (Button)findViewById(R.id.split_day6);
+        day6=   (Button)findViewById(R.id.split_day6);
 
 
         // Get the Intent that started this activity and extract the string

@@ -30,6 +30,7 @@
         <activity android:name=".ui.entrainement.Entrainement_hf"/>
         <activity android:name=".ui.entrainement.Entrainement_ppl"/>
         <activity android:name=".ui.entrainement.Entrainement_split"/>
+        <activity android:name=".ui.entrainement.EntrainementActivity"/>
     </application>
 
 </manifest>

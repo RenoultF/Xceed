@@ -11,7 +11,9 @@ import android.view.View;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-
+/**
+ * Created by Alkassoum
+ */
 public class GifImageView extends View {
 
     private InputStream mInputStream;

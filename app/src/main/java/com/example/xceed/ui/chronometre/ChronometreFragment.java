@@ -20,7 +20,9 @@ import android.widget.Button;
 import android.widget.Chronometer;
 
 import com.example.xceed.R;
-
+/**
+ * Created by Alkassoum
+ */
 public class ChronometreFragment extends Fragment {
     private Chronometer simpleChronometer;
     private ImageButton  start, stop, restart;

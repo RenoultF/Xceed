@@ -33,7 +33,9 @@ import com.example.xceed.ui.profil.ProfilViewModel;
 import com.goodiebag.protractorview.ProtractorView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.xw.repo.BubbleSeekBar;
-
+/**
+ * Created by Alkassoum
+ */
 public class PplActivity extends Activity {
     private Button day1,day2,day3,day4,day5,day6;
 

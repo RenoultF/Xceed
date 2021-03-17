@@ -24,7 +24,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-
+/**
+ * Created by Alkassoum
+ */
 public class Entrainement_fb extends AppCompatActivity {
     private Intent intent;
     protected int nbJours;
@@ -392,6 +394,7 @@ public class Entrainement_fb extends AppCompatActivity {
         //list of sets
         List<Sets> sets=new ArrayList<Sets>();
         int c = getIntent().getIntExtra("DayNum",0);
+        Exercice excourant ;
        switch (c){
            case R.id.fb_day1://jour 1 full body
             sets.add(new Sets(15, 10, new Exercice("Developpé couché (Barre)", "Ceci est du dev Couch", R.drawable.gif_dc, "Pectoraux"), true));
