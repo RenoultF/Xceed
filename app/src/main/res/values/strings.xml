@@ -45,6 +45,7 @@
     <string name="add_ppl">PPL</string>
     <string name="add_split">Spllit</string>
     <string name="nb_serie">nombre de series</string>
+    <string name="quitter">Quitter</string>
 
 
 </resources>

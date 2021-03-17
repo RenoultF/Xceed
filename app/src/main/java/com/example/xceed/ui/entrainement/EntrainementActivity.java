@@ -59,98 +59,98 @@ public class EntrainementActivity extends Activity {
 
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
-        int id = intent.getIntExtra("dayNum",0);
+        int id = intent.getIntExtra("ButtonId",0);
         int indiceExercice = 0;
         //String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         switch (id){
-            case R.id.imgEx1:
+            case R.id.button1:
                 indiceExercice = 0;
                 break;
-            case R.id.imgEx2:
+            case R.id.button2:
                 indiceExercice = 1;
                 break;
-            case R.id.imgEx3:
+            case R.id.button3:
                 indiceExercice = 2;
                 break;
-            case R.id.imgEx4:
+            case R.id.button4:
                 indiceExercice = 3;
                 break;
-            case R.id.imgEx5:
+            case R.id.button5:
                 indiceExercice = 4;
                 break;
-            case R.id.imgEx6:
+            case R.id.button6:
                 indiceExercice = 5;
                 break;
-            case R.id.imgEx7:
+            case R.id.button7:
                 indiceExercice = 6;
                 break;
-            case R.id.imgEx8:
+            case R.id.button8:
                 indiceExercice = 7;
                 break;
-            case R.id.imgEx9:
+            case R.id.button9:
                 indiceExercice = 8;
                 break;
-            case R.id.imgEx10:
+            case R.id.button10:
                 indiceExercice = 9;
                 break;
-            case R.id.imgEx11:
+            case R.id.button11:
                 indiceExercice = 10;
                 break;
-            case R.id.imgEx12:
+            case R.id.button12:
                 indiceExercice = 11;
                 break;
-            case R.id.imgEx13:
+            case R.id.button13:
                 indiceExercice = 12;
                 break;
-            case R.id.imgEx14:
+            case R.id.button14:
                 indiceExercice = 13;
                 break;
-            case R.id.imgEx15:
+            case R.id.button15:
                 indiceExercice = 14;
                 break;
-            case R.id.imgEx16:
+            case R.id.button16:
                 indiceExercice = 15;
                 break;
-            case R.id.imgEx17:
+            case R.id.button17:
                 indiceExercice = 16;
                 break;
-            case R.id.imgEx18:
+            case R.id.button18:
                 indiceExercice = 17;
                 break;
-            case R.id.imgEx19:
+            case R.id.button19:
                 indiceExercice = 18;
                 break;
-            case R.id.imgEx20:
+            case R.id.button20:
                 indiceExercice = 19;
                 break;
-            case R.id.imgEx21:
+            case R.id.button21:
                 indiceExercice = 20;
                 break;
-            case R.id.imgEx22:
+            case R.id.button22:
                 indiceExercice = 21;
                 break;
-            case R.id.imgEx23:
+            case R.id.button23:
                 indiceExercice = 22;
                 break;
-            case R.id.imgEx24:
+            case R.id.button24:
                 indiceExercice = 23;
                 break;
-            case R.id.imgEx25:
+            case R.id.button25:
                 indiceExercice = 24;
                 break;
-            case R.id.imgEx26:
+            case R.id.button26:
                 indiceExercice = 25;
                 break;
-            case R.id.imgEx27:
+            case R.id.button27:
                 indiceExercice = 26;
                 break;
-            case R.id.imgEx28:
+            case R.id.button28:
                 indiceExercice = 27;
                 break;
-            case R.id.imgEx29:
+            case R.id.button29:
                 indiceExercice = 28;
                 break;
-            case R.id.imgEx30:
+            case R.id.button30:
                 indiceExercice = 29;
                 break;
         }
@@ -172,7 +172,7 @@ public class EntrainementActivity extends Activity {
 
         int position = (Integer)v.getTag();
 
-
+        System.out.println("test"+position);
         listEntrainement.get(position).addExercice(exCourant);
         finish();
 

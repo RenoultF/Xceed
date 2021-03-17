@@ -78,8 +78,8 @@ public class AdapterExercice extends BaseAdapter {
             }
         });*/
         itemNameView.setText(workoutName);
-        itemSetsnbView.setText(R.string.nb_serie +" "+currentSet.getNbSerie());
-        itemNbRepView.setText(R.string.repetitions +" "+currentSet.getNbSerie());
+        itemSetsnbView.setText(convertView.getResources().getText(R.string.nb_serie )+" "+currentSet.getNbSerie());
+        itemNbRepView.setText(convertView.getResources().getText(R.string.repetitions )+" "+currentSet.getNbSerie());
 
 
         // itemRepsView.setText(context.getResources().getString(R.string.lefting)+" "+ itemReps +context.getResources().getString(R.string.repetitions) );

@@ -69,6 +69,13 @@ public void addExercice(Exercice a){
         for(Exercice e :EntrainementActivity.listEntrainement.get(c).lstExercices){
             sets.add(e);
         }
+        Button quit = (Button) findViewById(R.id.btn_quitter);
+        quit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         ListView lstView = findViewById(R.id.ListView1);
         lstView.setAdapter(new AdapterExercice(this,sets));
         int indiceExercice = 0;
