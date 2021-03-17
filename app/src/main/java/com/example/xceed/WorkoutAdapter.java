@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -46,6 +47,7 @@ public class WorkoutAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         convertView = inflater.inflate(R.layout.adapter_entrainement,null);
         // get info about item[pos]
         Entrainement currentSet = getItem(position);
@@ -54,6 +56,8 @@ public class WorkoutAdapter extends BaseAdapter {
         TextView itemNameView= convertView.findViewById(R.id.workout_name);
         //ImageView itemImageView = convertView.findViewById(R.id.item_icon);
         TextView itemSetsnbView = convertView.findViewById(R.id.item_setsnumber);
+        Button t = (Button) convertView.findViewById(R.id.add_to);
+        t.setTag(position);
 
         //itemImageView.set;
         itemNameView.setText(itemName);

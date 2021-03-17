@@ -22,5 +22,12 @@
             android:textSize="20dp"
             android:textColor="@color/colorPrimary"/>
 
+        <Button
+            android:id="@+id/add_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/workout_name"
+            android:layout_marginTop="15dp"
+            android:onClick="addExercice" />
     </RelativeLayout>
 </LinearLayout>

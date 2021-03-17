@@ -2,6 +2,8 @@ package com.example.xceed;
 
 import android.os.Bundle;
 
+import com.example.xceed.ui.entrainement.Entrainement;
+import com.example.xceed.ui.entrainement.EntrainementActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
         //entrainement
+        EntrainementActivity.listEntrainement.add(new Entrainement("FB"));
+        EntrainementActivity.listEntrainement.add(new Entrainement("HF"));
+        EntrainementActivity.listEntrainement.add(new Entrainement("PPl"));
+        EntrainementActivity.listEntrainement.add(new Entrainement("Split"));
       /*  NavController navControllerEntrainement = Navigation.findNavController(this,R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController((this));
 */

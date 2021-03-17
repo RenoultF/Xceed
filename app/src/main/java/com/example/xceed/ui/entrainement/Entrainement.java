@@ -37,16 +37,13 @@ public class Entrainement extends AppCompatActivity {
     }
 
 
-
-
-
-
-
     public void setLstExercices(ArrayList<Exercice> lstExercices) {
         this.lstExercices = lstExercices;
     }
 
-
+public void addExercice(Exercice a){
+        this.lstExercices.add(a);
+}
 
   /*  public void setNbRep(int nbRep) {
         this.nbRep = nbRep;
