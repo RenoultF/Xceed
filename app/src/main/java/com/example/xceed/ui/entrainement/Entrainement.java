@@ -22,13 +22,14 @@ import com.example.xceed.ui.exercice.Exercice;
  * Created by Alkassoum
  */
 public class Entrainement {
+    //Instance >Variables déclaration
     public LinkedList<Sets> sets;
     private LinkedList<Sets> setsDone;
     public ArrayList<Exercice> lstExercices = new ArrayList<Exercice>();
     public String nomEntrainement;
     private int idImgEntrainement;
 
-    //permet d'avoir les fonctions de récupération et de sauvegarde
+    //Let us have saved informations
     private GereEntrainement gereEntrainement = new GereEntrainement();
 
 

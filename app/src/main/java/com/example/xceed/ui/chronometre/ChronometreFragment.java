@@ -24,7 +24,7 @@ import com.example.xceed.R;
  * Created by Alkassoum
  */
 public class ChronometreFragment extends Fragment {
-    private Chronometer simpleChronometer;
+    private Chronometer simpleChronometer; //We use the android provided chronometer
     private ImageButton  start, stop, restart;
     private Button setFormat, clearFormat;
     private TextView value;
@@ -36,6 +36,7 @@ public class ChronometreFragment extends Fragment {
         chronometreViewModel =
                 new ViewModelProvider(this).get(ChronometreViewModel.class);
         View root = inflater.inflate(R.layout.fragment_chronometre, container, false);
+// Button recuperation
         simpleChronometer = (Chronometer) root.findViewById(R.id.simpleChronometer);
         start =  (ImageButton)root.findViewById(R.id.startButton);
         stop =  (ImageButton)root.findViewById(R.id.stopButton);
@@ -43,6 +44,7 @@ public class ChronometreFragment extends Fragment {
         setFormat =  (Button)root.findViewById(R.id.setFormat);
         clearFormat = (Button)root.findViewById(R.id.clearFormat);
 
+        //Setting observers/listner on button
         chronometreViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

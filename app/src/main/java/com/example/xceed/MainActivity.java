@@ -49,9 +49,7 @@ public class MainActivity extends AppCompatActivity {
         EntrainementActivity.listEntrainement.add(entrainementPPl);
         EntrainementActivity.listEntrainement.add(entrainementSplit);
 
-      /*  NavController navControllerEntrainement = Navigation.findNavController(this,R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController((this));
-*/
+
     }
 
 }

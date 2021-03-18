@@ -62,9 +62,7 @@ public class WorkoutAdapter extends BaseAdapter {
 
         //itemImageView.set;
         itemNameView.setText(itemName);
-       // itemRepsView.setText(context.getResources().getString(R.string.lefting)+" "+ itemReps +context.getResources().getString(R.string.repetitions) );
 
-        //itemSetsnbView.setText(context.getResources().getString(R.string.setSsize) + " "+currentSet.exercice.numOfSets);
 
 
 

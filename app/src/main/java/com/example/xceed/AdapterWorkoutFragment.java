@@ -72,12 +72,6 @@ public class AdapterWorkoutFragment extends BaseAdapter {
         itemNameView.setText(workoutName);
 
 
-        // itemRepsView.setText(context.getResources().getString(R.string.lefting)+" "+ itemReps +context.getResources().getString(R.string.repetitions) );
-
-        //itemSetsnbView.setText(context.getResources().getString(R.string.setSsize) + " "+currentSet.exercice.numOfSets);
-
-
-
         return convertView;
     }
 }

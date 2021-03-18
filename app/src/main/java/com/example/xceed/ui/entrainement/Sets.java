@@ -5,6 +5,7 @@ import com.example.xceed.ui.exercice.Exercice;
  * Created by Alkassoum
  */
 public class Sets {
+    //descriptive set attributes
     public String exercice_Name;
     public double weight;
     public int reps;
@@ -12,7 +13,7 @@ public class Sets {
     public boolean AMRAP;
     public Exercice exercice;
 
-
+//default constructor
     public Sets (int sentReps, double sentweight, Exercice exercice, boolean dropset){
         this.weight = sentweight;
         this.reps = sentReps;

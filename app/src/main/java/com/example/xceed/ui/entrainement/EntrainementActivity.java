@@ -56,15 +56,15 @@ public class EntrainementActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entrainement_show);
 
-       // ArrayList<Entrainement> listEntrainement = new ArrayList<Entrainement>();
+
 
 
 
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
+        //the extra refer to the clicked id button, which allows us to know on which exercice the user clicked
         int id = intent.getIntExtra("ButtonId",0);
         int indiceExercice = 0;
-        //String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         switch (id){
             case R.id.button1:
                 indiceExercice = 0;
@@ -157,6 +157,8 @@ public class EntrainementActivity extends Activity {
                 indiceExercice = 29;
                 break;
         }
+
+        //put the exercice in the list using the indicePosition setted before
 
         exCourant = ExerciceFragment.listExercice.get(indiceExercice);
         ListView workouts =findViewById(R.id.workoutView);

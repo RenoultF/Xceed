@@ -37,7 +37,7 @@ import java.util.List;
  * Created by Alkassoum
  */
 public class EntrainementFragment extends Fragment {
-
+//Workout fragment
     private EntrainementViewModel entrainementViewModel;
 
 
@@ -52,6 +52,7 @@ public class EntrainementFragment extends Fragment {
         View root = inflater.inflate(R.layout.workout_show, container, false);
 
         ListView lstView = root.findViewById(R.id.workout_show);
+        // shows all workout we currently have through Adapters
         lstView.setAdapter(new AdapterWorkoutFragment(getActivity(),EntrainementActivity.listEntrainement));
 
 
