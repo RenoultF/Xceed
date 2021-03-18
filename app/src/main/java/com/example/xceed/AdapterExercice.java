@@ -63,8 +63,8 @@ public class AdapterExercice extends BaseAdapter {
 
         itemImageView.setImageResource(idImg);
         itemNameView.setText(workoutName);
-        itemSetsnbView.setText(nbSerie);
-        itemNbRepView.setText(nbRep);
+        itemSetsnbView.setText(context.getResources().getString(R.string.setSsize)+" "+ nbSerie);
+        itemNbRepView.setText(context.getResources().getString(R.string.repetitions)+" "+ nbRep);
 
 
         // itemRepsView.setText(context.getResources().getString(R.string.lefting)+" "+ itemReps +context.getResources().getString(R.string.repetitions) );

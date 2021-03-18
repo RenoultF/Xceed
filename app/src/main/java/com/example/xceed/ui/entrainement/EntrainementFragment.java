@@ -39,10 +39,7 @@ import java.util.List;
 public class EntrainementFragment extends Fragment {
 
     private EntrainementViewModel entrainementViewModel;
-    private Button lunch_split;
-    private Button lunch_ppl;
-    private Button lunch_hf;
-    private Button lunch_fb;
+
 
 
 

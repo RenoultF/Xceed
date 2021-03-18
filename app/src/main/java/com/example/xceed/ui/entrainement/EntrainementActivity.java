@@ -167,7 +167,6 @@ public class EntrainementActivity extends Activity {
         //Intent intent = new Intent(EntrainementActivity.this.getActivity(), EntrainementActivity.class);
         //intent.putExtra("ButtonId",i.getId());
         //startActivity(intent);
-
         int position = (Integer)v.getTag();
         listEntrainement.get(position).getLstExercices().add(exCourant);
         finish();

@@ -43,8 +43,6 @@ public class ChronometreFragment extends Fragment {
         setFormat =  (Button)root.findViewById(R.id.setFormat);
         clearFormat = (Button)root.findViewById(R.id.clearFormat);
 
-        //final TextView textView = root.findViewById(R.id.text_notifications);
-        // value.setText(this.temps.getTop() +":"+this.temps.getMid()+":"+this.temps.getLast());
         chronometreViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
