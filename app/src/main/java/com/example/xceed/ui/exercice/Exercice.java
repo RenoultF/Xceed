@@ -39,6 +39,7 @@ public class Exercice {
         this.idImg = idImg;
     }
 
+    //getter & sette
     public String getNomExerciceEx() {
         return this.nomExercice;
     }

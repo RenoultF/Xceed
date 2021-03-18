@@ -13,6 +13,7 @@ public class Profil {
         this.imc = imc;
     }
 
+    //setter & getter
     public String getKg() {
         return kg;
     }
@@ -45,6 +46,7 @@ public class Profil {
         this.imc = imc;
     }
 
+    //fonction permettant de calculer l'imc
     public float calculImc(){
         float tailleImc = (float)this.taille/100;
         float imcTemp = Float.parseFloat(this.kg)/(tailleImc*tailleImc);

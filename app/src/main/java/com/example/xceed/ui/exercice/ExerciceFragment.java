@@ -36,6 +36,8 @@ public class ExerciceFragment extends Fragment {
         exerciceViewModel =
                 new ViewModelProvider(this).get(ExerciceViewModel.class);
         View root = inflater.inflate(R.layout.fragment_exercice, container, false);
+
+        //on récu^père toutes les images
         all_buton.add((ImageView) root.findViewById(R.id.imgEx1));
         all_buton.add((ImageView) root.findViewById(R.id.imgEx2));
         all_buton.add((ImageView) root.findViewById(R.id.imgEx3));
@@ -67,6 +69,7 @@ public class ExerciceFragment extends Fragment {
         all_buton.add((ImageView) root.findViewById(R.id.imgEx29));
         all_buton.add((ImageView) root.findViewById(R.id.imgEx30));
 
+        //on récupère tous les boutons
         lstbtnadd.add((Button) root.findViewById(R.id.button1));
         lstbtnadd.add((Button) root.findViewById(R.id.button2));
         lstbtnadd.add((Button) root.findViewById(R.id.button3));
@@ -131,6 +134,7 @@ public class ExerciceFragment extends Fragment {
         listExercice.add(new Exercice("Fente (Haltere)","Ceci est des fentes",R.drawable.gif_fente, "Jambe",4,12,R.drawable.fente));
 
 
+        //onclick pour les boutons afin de lancer l'activité avec le bon id
         for(Button i : lstbtnadd){
             i.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -147,13 +151,8 @@ public class ExerciceFragment extends Fragment {
 
 
 
-
-
-
-
-
         lunch_dc =(ImageView) root.findViewById(R.id.imgEx1);
-
+        //onclick pour les boutons afin de lancer l'activité avec le bon id
         for(ImageView i : all_buton){
             i.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -22,6 +22,7 @@ public class ProfilViewModel extends ViewModel {
         return mText;
     }
 
+    //fonction permettant de calculer l'imc en direct
     public float calculImcActuel(String taille, String poid){
         float tailleImc = (float)Float.parseFloat(taille)/100;
         float poidsImc = (float)Float.parseFloat(poid);

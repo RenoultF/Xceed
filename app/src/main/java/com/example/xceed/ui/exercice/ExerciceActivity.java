@@ -34,19 +34,20 @@ public class ExerciceActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //on recupérer l'id du boutton qui a lancé cette activité
         intent = getIntent();
         buttonId = intent.getIntExtra("ButtonId", 0);
 
         setContentView(R.layout.exercize_info);
 
-
-
-
+        //on recupère les items
         gifImageView = (GifImageView) findViewById(R.id.GifImageView);
         text_exercice = (TextView) findViewById(R.id.txt_exercice);
         text_description = (TextView) findViewById(R.id.txt_descriptif);
         text_categorie = (TextView) findViewById(R.id.txt_categorie);
 
+        //suivant l'id du bouton on aura un indice
         switch (buttonId){
             case R.id.imgEx1:
                 indiceExercice = 0;
@@ -139,7 +140,10 @@ public class ExerciceActivity extends Activity {
                 indiceExercice = 29;
                 break;
         }
+
+        //l'indice obtenu permet d'avoir acces au bon exercice
         exerciceCourant = ExerciceFragment.listExercice.get(indiceExercice);
+        //mis a jour des composants
         gifImageView.setGifImageResource(exerciceCourant.getIdGif());
         text_exercice.setText(exerciceCourant.getNomExerciceEx());
         text_categorie.setText(exerciceCourant.getCategorie());

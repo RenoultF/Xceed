@@ -28,6 +28,7 @@ public class Entrainement {
     public String nomEntrainement;
     private int idImgEntrainement;
 
+    //permet d'avoir les fonctions de récupération et de sauvegarde
     private GereEntrainement gereEntrainement = new GereEntrainement();
 
 
@@ -37,6 +38,7 @@ public class Entrainement {
     }
 
 
+    //setter & getter
     public void setLstExercices(ArrayList<Exercice> lstExercices) {
         this.lstExercices = lstExercices;
     }

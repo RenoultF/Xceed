@@ -57,15 +57,22 @@ public class ProfilFragment extends Fragment {
         profilViewModel =
                 new ViewModelProvider(this).get(ProfilViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profil, container, false);
+        //Gere profil permet davoir acces au fonction de récuparion et de sauvegarde.
         gereProfil = new GereProfil();
+        //on récupère le profil sur la mémoire interne
         profilRecup = gereProfil.recupProfil(getContext());
+
+        //On récupere les items
         changeTail = (TextView) root.findViewById(R.id.txt_taille);
         changePoids = (TextView) root.findViewById(R.id.txt_poids);
+        //widget protactorview
         ProtractorView protractorViewPoids = (ProtractorView)root.findViewById(R.id.protractorViewPoids);
         seekBarTaille = (SeekBar) root.findViewById(R.id.seekBarTaille);
         seekBarImc = (BubbleSeekBar) root.findViewById(R.id.seekBar_imc);
         pseudo = (EditText) root.findViewById(R.id.txt_pseudo);
         affichageImc = (TextView) root.findViewById(R.id.affichage_imc);
+
+        //on met a jour les les valeures selon le profil que l'on a récupéré
         protractorViewPoids.setAngle(Integer.parseInt(profilRecup.getKg()));
         seekBarTaille.setProgress(profilRecup.getTaille());
         changePoids.setText("Poids : " + profilRecup.getKg() + "Kg");
@@ -74,20 +81,19 @@ public class ProfilFragment extends Fragment {
             @SuppressLint({"ResourceAsColor", "NewApi"})
             @Override
             public void onProgressChanged(ProtractorView protractorView, int progress, boolean fromUser) {
-                /*try {
-                    TimeUnit.MILLISECONDS.sleep(100);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }*/
+                //met a jour du text poid en fonction du changement (permet de voir la valeure en direct)
                 changePoids.setText("Poids : " +Integer.toString(progress) + "Kg");
                 float calculImc = profilViewModel.calculImcActuel(String.valueOf(seekBarTaille.getProgress()),String.valueOf(progress));
                 setViewImc(calculImc);
+                //on ne fait pas dépasser 12 et 42 pour rester dans la seekbar
                 if(calculImc>42){
                     calculImc = 42;
                 }
                 if(calculImc<12){
                     calculImc = 12;
                 }
+
+                //mise a jour du la valeur de la seekbar(imc)
                 seekBarImc.setProgress(calculImc);
 
             }
@@ -99,6 +105,7 @@ public class ProfilFragment extends Fragment {
 
             @Override
             public void onStopTrackingTouch(ProtractorView protractorView) {
+                //des que l'on arrete de la toucher on sauvegarde
                 gereProfil.saveProfil(getContext(),pseudo.getText().toString(),String.valueOf(seekBarTaille.getProgress()),String.valueOf(protractorViewPoids.getAngle()));
             }
         });
@@ -106,6 +113,7 @@ public class ProfilFragment extends Fragment {
         seekBarTaille.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                //mise a jour de la taille a chaque fois que l'on change (permet de voir la valeure en direct)
                 changeTail.setText("Taille : "+Integer.toString(progress)+ " cm");
                 float calculImc = profilViewModel.calculImcActuel(String.valueOf(progress),String.valueOf(protractorViewPoids.getAngle()));
                 setViewImc(calculImc);
@@ -115,6 +123,7 @@ public class ProfilFragment extends Fragment {
                 if(calculImc<12){
                     calculImc = 12;
                 }
+                //mise a jour du la valeur de la seekbar(imc)
                 seekBarImc.setProgress(calculImc);
             }
 
@@ -125,16 +134,21 @@ public class ProfilFragment extends Fragment {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+                //des que l'on arrete de la toucher on sauvegarde
                 gereProfil.saveProfil(getContext(),pseudo.getText().toString(),String.valueOf(seekBarTaille.getProgress()),String.valueOf(protractorViewPoids.getAngle()));
             }
         });
+
+        //permet la mis a jour a l'entré dans lappli selon le profil que l'on a récupéré
         seekBarImc.setEnabled(false);
         seekBarImc.setProgress(profilRecup.calculImc());
+        //les valeurs de base quand on rentre dans l'appli
         changeTail.setText("Taille : "+Integer.toString(profilRecup.getTaille())+ " cm");
         pseudo.setText(profilRecup.getPseudo());
         btnModifProfil = (ImageButton) root.findViewById(R.id.BtnVlider);
         btnModifProfil.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View root) {
+                //on sauvegarde quand on appuie sur el bouton save
                 gereProfil.saveProfil(getContext(),pseudo.getText().toString(),String.valueOf(seekBarTaille.getProgress()),String.valueOf(protractorViewPoids.getAngle()));
             } });
 
@@ -142,6 +156,7 @@ public class ProfilFragment extends Fragment {
     }
 
     public void setViewImc(float calculImc){
+        //selon la valeur de l'imc on va changer l'apparence de cette dernière
         if(calculImc<18.5){
             affichageImc.setText("Insuffisance pondérale (maigreur)");
             affichageImc.setTextColor(getContext().getColor(R.color.blue));
