@@ -54,7 +54,8 @@ public class WorkoutAdapter extends BaseAdapter {
         String itemName = currentSet.nomEntrainement;
         //editing adapter_item views
         TextView itemNameView= convertView.findViewById(R.id.workout_name);
-        //ImageView itemImageView = convertView.findViewById(R.id.item_icon);
+        ImageView itemImageView = convertView.findViewById(R.id.item_icon);
+        itemImageView.setImageResource(currentSet.getIdImgEntrainement());
         TextView itemSetsnbView = convertView.findViewById(R.id.item_setsnumber);
         Button t = (Button) convertView.findViewById(R.id.add_to);
         t.setTag(position);

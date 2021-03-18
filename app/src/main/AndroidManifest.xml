@@ -21,17 +21,9 @@
 
         </activity>
         <activity android:name=".MainActivity"/>
-        <activity android:name=".ui.entrainement.FbActivity"/>
-        <activity android:name=".ui.entrainement.HfActivity"/>
-        <activity android:name=".ui.entrainement.PplActivity"/>
-        <activity android:name=".ui.entrainement.SplitActivity"/>
         <activity android:name=".ui.exercice.ExerciceActivity"/>
-        <activity android:name=".ui.entrainement.Entrainement_fb"/>
-        <activity android:name=".ui.entrainement.Entrainement_hf"/>
-        <activity android:name=".ui.entrainement.Entrainement_ppl"/>
-        <activity android:name=".ui.entrainement.Entrainement_split"/>
         <activity android:name=".ui.entrainement.EntrainementActivity"/>
-        <activity android:name=".ui.entrainement.Entrainement"/>
+        <activity android:name=".ui.entrainement.Entrainement2Activity"/>
     </application>
 
 </manifest>

@@ -12,6 +12,9 @@ import android.widget.TextView;
 import com.example.xceed.GifImageView;
 
 import com.example.xceed.R;
+import com.example.xceed.ui.entrainement.Entrainement;
+import com.example.xceed.ui.entrainement.EntrainementActivity;
+import com.example.xceed.ui.entrainement.GereEntrainement;
 
 import org.w3c.dom.Text;
 
@@ -35,6 +38,8 @@ public class ExerciceActivity extends Activity {
         buttonId = intent.getIntExtra("ButtonId", 0);
 
         setContentView(R.layout.exercize_info);
+
+
 
 
         gifImageView = (GifImageView) findViewById(R.id.GifImageView);

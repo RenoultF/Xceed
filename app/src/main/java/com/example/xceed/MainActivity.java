@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.example.xceed.ui.entrainement.Entrainement;
 import com.example.xceed.ui.entrainement.EntrainementActivity;
+import com.example.xceed.ui.entrainement.GereEntrainement;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,12 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
+
+    private GereEntrainement gereEntrainement;
+    private Entrainement entrainementFB;
+    private Entrainement entrainementHF;
+    private Entrainement entrainementPPl;
+    private Entrainement entrainementSplit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +34,21 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+
+        gereEntrainement = new GereEntrainement();
         //entrainement
-        EntrainementActivity.listEntrainement.add(new Entrainement("FB"));
-        EntrainementActivity.listEntrainement.add(new Entrainement("HF"));
-        EntrainementActivity.listEntrainement.add(new Entrainement("PPl"));
-        EntrainementActivity.listEntrainement.add(new Entrainement("Split"));
+        entrainementFB = gereEntrainement.recupEntrainement(getApplicationContext(),"FB",R.drawable.img_fb);
+        entrainementHF = gereEntrainement.recupEntrainement(getApplicationContext(),"HB",R.drawable.img_hb);
+        entrainementPPl = gereEntrainement.recupEntrainement(getApplicationContext(),"PPl",R.drawable.img_ppl);
+        entrainementSplit = gereEntrainement.recupEntrainement(getApplicationContext(),"Split",R.drawable.img_split);
+
+
+        EntrainementActivity.listEntrainement.add(entrainementFB);
+        EntrainementActivity.listEntrainement.add(entrainementHF);
+        EntrainementActivity.listEntrainement.add(entrainementPPl);
+        EntrainementActivity.listEntrainement.add(entrainementSplit);
+
       /*  NavController navControllerEntrainement = Navigation.findNavController(this,R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController((this));
 */

@@ -43,10 +43,9 @@ public class EntrainementFragment extends Fragment {
     private Button lunch_ppl;
     private Button lunch_hf;
     private Button lunch_fb;
-    private Entrainement_fb entrainement_fb;
-    private Entrainement_hf entrainement_hf;
-    private Entrainement_ppl entrainement_ppl;
-    private Entrainement_split entrainement_split;
+
+
+
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -54,10 +53,6 @@ public class EntrainementFragment extends Fragment {
         entrainementViewModel =
                 new ViewModelProvider(this).get(EntrainementViewModel.class);
         View root = inflater.inflate(R.layout.workout_show, container, false);
-        /*entrainement_fb = new Entrainement_fb(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));
-        entrainement_hf = new Entrainement_hf(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));
-        entrainement_ppl = new Entrainement_ppl(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));
-        entrainement_split = new Entrainement_split(4,12,new LinkedList<Exercice>((Collection<? extends Exercice>) new Exercice("deevcouch")));*/
 
         ListView lstView = root.findViewById(R.id.workout_show);
         lstView.setAdapter(new AdapterWorkoutFragment(getActivity(),EntrainementActivity.listEntrainement));

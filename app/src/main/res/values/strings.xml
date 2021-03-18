@@ -46,6 +46,9 @@
     <string name="add_split">Spllit</string>
     <string name="nb_serie">nombre de series</string>
     <string name="quitter">Quitter</string>
+    <string name="Ajouter">Ajouter</string>
+    <string name="Lancer">LANCER</string>
+    <string name="Supprimer">SUPPRIMER</string>
 
 
 </resources>

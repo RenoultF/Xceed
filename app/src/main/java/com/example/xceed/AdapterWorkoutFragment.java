@@ -2,8 +2,6 @@ package com.example.xceed;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.LauncherApps;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +10,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.xceed.ui.entrainement.Entrainement;
+import com.example.xceed.ui.entrainement.Entrainement2Activity;
 import com.example.xceed.ui.entrainement.EntrainementActivity;
-import com.example.xceed.ui.entrainement.Entrainement_fb;
-import com.example.xceed.ui.entrainement.Sets;
 
 import java.util.List;
 /**
@@ -59,7 +54,8 @@ public class AdapterWorkoutFragment extends BaseAdapter {
         String workoutName = currentSet.nomEntrainement;
         //editing adapter_item views
         TextView itemNameView= convertView.findViewById(R.id.workout_list);
-        //ImageView itemImageView = convertView.findViewById(R.id.item_icon);
+        ImageView itemImageView = convertView.findViewById(R.id.item_icon);
+        itemImageView.setImageResource(currentSet.getIdImgEntrainement());
         TextView itemSetsnbView = convertView.findViewById(R.id.item_setsnumber);
         Button t = (Button) convertView.findViewById(R.id.add_to);
         t.setTag(position);
@@ -67,7 +63,7 @@ public class AdapterWorkoutFragment extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 System.out.println(t.getTag());
-                Intent i = new Intent(context.getApplicationContext(), Entrainement.class);
+                Intent i = new Intent(context.getApplicationContext(), Entrainement2Activity.class);
                 i.putExtra("Numinlst",(Integer)t.getTag());
                 context.startActivity(i);
              //   System.out.println(EntrainementActivity.listEntrainement.get((int)t.getTag()));

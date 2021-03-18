@@ -49,10 +49,13 @@ import java.util.List;
 public class EntrainementActivity extends Activity {
         public static ArrayList<Entrainement> listEntrainement = new ArrayList<Entrainement>();
         private Exercice exCourant;
+        private GereEntrainement gereEntrainement = new GereEntrainement();
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entrainement_show);
+
        // ArrayList<Entrainement> listEntrainement = new ArrayList<Entrainement>();
 
 
@@ -154,32 +157,20 @@ public class EntrainementActivity extends Activity {
                 indiceExercice = 29;
                 break;
         }
-        // Capture the layout's TextView and set the string as its text
-        // TextView textView = findViewById(R.id.textView);
-        //textView.setText(message);
+
         exCourant = ExerciceFragment.listExercice.get(indiceExercice);
-
         ListView workouts =findViewById(R.id.workoutView);
-
         workouts.setAdapter(new WorkoutAdapter(this,listEntrainement));
-
-
     }
+
     public void addExercice(View v){
         //Intent intent = new Intent(EntrainementActivity.this.getActivity(), EntrainementActivity.class);
         //intent.putExtra("ButtonId",i.getId());
         //startActivity(intent);
 
         int position = (Integer)v.getTag();
-
-        System.out.println("test"+position);
-        listEntrainement.get(position).addExercice(exCourant);
+        listEntrainement.get(position).getLstExercices().add(exCourant);
         finish();
 
     }
-
-
-
-
-
 }

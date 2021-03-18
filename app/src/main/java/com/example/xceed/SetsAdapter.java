@@ -49,7 +49,8 @@ public class SetsAdapter extends BaseAdapter {
         // get info about item[pos]
         Sets currentSet = getItem(position);
         String itemName = currentSet.exercice.getNomExerciceEx();
-        double itemReps = currentSet.getReps();
+        String nbSerie = String.valueOf(currentSet.exercice.getNbSerie());
+        String nbRep = String.valueOf(currentSet.exercice.getNbRep());
         //editing adapter_item views
         TextView itemNameView= convertView.findViewById(R.id.item_name);
         TextView itemRepsView = convertView.findViewById(R.id.item_reps);
@@ -58,9 +59,8 @@ public class SetsAdapter extends BaseAdapter {
 
         //itemImageView.set;
         itemNameView.setText(itemName);
-        itemRepsView.setText(context.getResources().getString(R.string.lefting)+" "+ itemReps +context.getResources().getString(R.string.repetitions) );
-
-        itemSetsnbView.setText(context.getResources().getString(R.string.setSsize) + " "+currentSet.exercice.numOfSets);
+        itemRepsView.setText(nbSerie);
+        itemSetsnbView.setText(nbRep);
 
 
 

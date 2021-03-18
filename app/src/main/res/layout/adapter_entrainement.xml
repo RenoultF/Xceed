@@ -18,7 +18,6 @@
             android:id="@+id/workout_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:textSize="20dp"
             android:textColor="@color/colorPrimary"/>
 
@@ -28,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/workout_name"
             android:layout_marginTop="15dp"
+            android:text="@string/Ajouter"
             android:onClick="addExercice" />
     </RelativeLayout>
 </LinearLayout>

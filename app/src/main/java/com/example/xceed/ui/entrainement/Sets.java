@@ -11,6 +11,8 @@ public class Sets {
     public boolean dropset;
     public boolean AMRAP;
     public Exercice exercice;
+
+
     public Sets (int sentReps, double sentweight, Exercice exercice, boolean dropset){
         this.weight = sentweight;
         this.reps = sentReps;
